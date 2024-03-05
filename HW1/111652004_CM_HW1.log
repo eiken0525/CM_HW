@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  5 MAR 2024 13:20
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  5 MAR 2024 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -749,17 +749,35 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 113.
 Package mdframed Info: Not enough space on this page on input line 115.
- [1] (./111652004_CM_HW1.aux)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 118.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 129.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 140.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 145.
+Package mdframed Info: Not enough space on this page on input line 153.
+ [1]
+Package mdframed Info: Not enough space on this page on input line 153.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 156.
+ [2] (./111652004_CM_HW1.aux)
 Package rerunfilecheck Info: File `111652004_CM_HW1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22373 strings out of 476683
- 423434 string characters out of 5804047
- 1846018 words of memory out of 5000000
- 42247 multiletter control sequences out of 15000+600000
- 517324 words of font info for 55 fonts, out of 8000000 for 9000
+ 22392 strings out of 476683
+ 423795 string characters out of 5804047
+ 1856018 words of memory out of 5000000
+ 42260 multiletter control sequences out of 15000+600000
+ 519533 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,6n,104p,530b,371s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,104p,530b,480s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW1.xdv (2 pages, 7380 bytes).
+Output written on 111652004_CM_HW1.xdv (3 pages, 21136 bytes).

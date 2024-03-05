@@ -50,7 +50,7 @@
     {}          % indent amount
     {\rmfamily} % theorem head font
     {\textbf{.}}          % punctuation after theorem head
-    {\newline}  % space after theorem head
+    {0.5em}  % space after theorem head
     {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{\text{ (#3)}}}
                 % theorem hed spec. (empty = "normal")
 
@@ -111,8 +111,62 @@
 \pagenumbering{arabic}
 
 \begin{problem}
-    The car Jack wants to buy comes in four colours; with or without air conditioning; with five different options for stereo systems; and a choice of none, two, or four floor mats. If the dealership he visits has three cars in the lot, each with different options, what is the probability that one of the cars they have in stock has exactly the options he wants?
+    Use the intermediate value theorem and Rolle's theorem to show the graph of $f(x)=x^3+2x+k$ crosses the $x$-axis exactly once, regardless of the value of the constant $k$.
 \end{problem}
 \textbf{Solution}.
+
+\begin{problem}
+    Find $\displaystyle\max_{a\leq x\leq b}|f(x)|$ for the following functions and intervals.
+    \begin{enumerate}
+        \item $f(x)=\dfrac{2-e^x+2x}{3}$, $[0, 1]$
+        \item $f(x)=\dfrac{4x-3}{x^2-2x}$, $[0,5, 1]$
+        \item $f(x)=2x\cos(2x)-(x-2)^2$, $[2, 4]$
+        \item $f(x)=1+e^{-\cos(x-1)}$, $[1, 2]$
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Find the second Taylor polynomial $P_2(x)$ for the function $f(x)=e^x\cos(x)$ about $x_0=0$.
+    \begin{enumerate}
+        \item Use $P_2(0.5)$ to approximate $f(0.5)$. Find an upper bound for error $|f(0.5)-P_2(0.5)|$ using the error formula, and compare it to the actual error.
+        \item Find a bound for the error $|f(0.5)-P_2(0.5)|$ in using $P_2(x)$ to approximate $f(x)$ on the interval $[0, 1]$.
+        \item Approximate $\displaystyle\int_{0}^{1}f(x)\ddi x$ using $\displaystyle\int_{0}^{1}P_2(x)\ddi x$.
+        \item Find an upper bound for the error in (c) using $\displaystyle\int_{0}^{1}|P_2(x)|\ddi x$.
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Let $f(x)=\dfrac{1}{1-x}$ and $x_0=0$. Find the $n$-th Taylor polynomial $P_n(x)$ for $f(x)$ about $x_0$. Find a value of $n$ necessary for $P_n(x)$ to approximate $f(x)$ to within $10^{-6}$ on $[0, 0.5]$.
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Find the largest interval in which $p^\ast$ must lie to approximate $p$ with relative error at most $10^{-4}$ for each value of $p$.
+    \begin{enumerate}
+        \item $pi$
+        \item $e$
+        \item $\sqrt{2}$
+        \item $\sqrt[3]{7}$
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Let \vspace{-0.6em}
+    \begin{equation*}
+        f(x)=\dfrac{e^{x}-e^{-x}}{x}. \vspace{-0.6em}
+    \end{equation*}
+    \begin{enumerate}
+        \item Find $\displaystyle\lim_{x\to 0}\dfrac{e^{x}-e^{-x}}{x}$.
+        \item Use three-digit rounding arithmatic to evaluate $f(x)$.
+        \item Replace each exponential function with its Maclaurin polynomial, and repeat part (b).
+        \item The actual value is $f(0.1)=2.003335000$. Find the relative error for the values obtained in part (b) and (c).
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+
+
 
 \end{document}
