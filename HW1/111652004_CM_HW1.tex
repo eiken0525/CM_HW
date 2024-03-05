@@ -49,7 +49,7 @@
     {}          % body font
     {}          % indent amount
     {\rmfamily} % theorem head font
-    {\textbf{.}}          % punctuation after theorem head
+    {.}          % punctuation after theorem head
     {0.5em}  % space after theorem head
     {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{\text{ (#3)}}}
                 % theorem hed spec. (empty = "normal")
@@ -111,10 +111,14 @@
 \pagenumbering{arabic}
 
 \begin{problem}
-    Use the intermediate value theorem and Rolle's theorem to show the graph of $f(x)=x^3+2x+k$ crosses the $x$-axis exactly once, regardless of the value of the constant $k$.
+    Use the intermediate value theorem and Rolle's theorem to show the graph of \vspace{-0.6em}
+    \begin{equation*}
+        f(x)=x^3+2x+k \vspace{-0.6em}
+    \end{equation*}
+    crosses the $x$-axis exactly once, regardless of the value of the constant $k$.
 \end{problem}
-\textbf{Solution}.
-
+\textbf{Proof}. Let $k\in\mathbb R$. We first show that $f(x)=0$ has a root. Suppose $k=0$. Then, we can factorize $f(x)=x(x^2+2)$. Thus, it is clear that $f(x)=0$ has only one root $x=0$. Suppose $k>0$. Choose $x_1=0$ and $x_2=-k$. Then, $f(x_1)=k>0$ and $f(x_2)=-k^3-k<0$. By the intermediate value theorem, there exists a root between $x_1$ and $x_2$. Suppose $k<0$. Choose $x_3=0$ and $x_4=-k$. Then, $f(x_3)=k<0$ and $f(x_4)=-k^3-k>0$. By the intermediate value theorem, there exists a root between $x_3$ and $x_4$. We now show that there is only one root. Observe that $\dfrac{\dd f}{\dd x}(x)=3x^2+2>0$ for all $x\in\mathbb R$ regardless of the value of $k$. For the sake of contradiction, we suppose there are two distinct roots $\alpha$ and $\beta$ such that $f(\alpha)=f(\beta)=0$. By Rolle's theorem, there exists an $x_0$ between $\alpha$ and $\beta$ such that $\dfrac{\dd f}{\dd x}(x_0)=0$, a contradiction. Hence, there is only one root. \qed
+\newpage
 \begin{problem}
     Find $\displaystyle\max_{a\leq x\leq b}|f(x)|$ for the following functions and intervals.
     \begin{enumerate}
@@ -125,7 +129,11 @@
     \end{enumerate}
 \end{problem}
 \textbf{Solution}.
+\begin{enumerate}
+    \item 
+\end{enumerate}
 
+\newpage
 \begin{problem}
     Find the second Taylor polynomial $P_2(x)$ for the function $f(x)=e^x\cos(x)$ about $x_0=0$.
     \begin{enumerate}
@@ -135,7 +143,11 @@
         \item Find an upper bound for the error in (c) using $\displaystyle\int_{0}^{1}|P_2(x)|\ddi x$.
     \end{enumerate}
 \end{problem}
-\textbf{Solution}.
+\textbf{Solution}. By Taylor's theorem, the second Taylor polynomial about $0$ is \vspace{-0.6em}
+\begin{align*}
+    P_2(x)&=f(0)+\dfrac{1}{1!}\cdot\dfrac{\dd f}{\dd x}(0)\cdot x+\dfrac{1}{2!}\cdot\dfrac{\dd^2 f}{\dd x^2}(0)\cdot x^2\\
+    &=1+x.
+\end{align*}
 
 \begin{problem}
     Let $f(x)=\dfrac{1}{1-x}$ and $x_0=0$. Find the $n$-th Taylor polynomial $P_n(x)$ for $f(x)$ about $x_0$. Find a value of $n$ necessary for $P_n(x)$ to approximate $f(x)$ to within $10^{-6}$ on $[0, 0.5]$.
@@ -167,6 +179,93 @@
 \end{problem}
 \textbf{Solution}.
 
+\begin{problem}
+    Use the 64-bit long real format to find the decimal equivalent of the following floating-point machine numbers.
+    \begin{enumerate}
+        \item $0\quad 10000001010\quad 1001001100000000000000000000000000000000000000000000$
+        \item $1\quad 10000001010\quad 1001001100000000000000000000000000000000000000000000$
+        \item $0\quad 01111111111\quad 0101001100000000000000000000000000000000000000000000$
+        \item $0\quad 01111111111\quad 0101001100000000000000000000000000000000000000000001$
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+\begin{enumerate}
+    \item Let $r_a$ be the desired floating-point number. Then, \vspace{-0.6em}
+    \begin{align*}
+        r_a&=(-1)^0\:2^{c-1023}\:(1+m)\\
+        &\approx7.5636560837216756408077116661258306544\times10^{-124},\\[-3.4em]
+    \end{align*}
+    where $c=1+128+512=614$ and $m=\dfrac{1}{2^{52}}+\dfrac{1}{2^{49}}+\dfrac{1}{2^{46}}+\dfrac{1}{2^{45}}=\dfrac{147}{2^{45}}$.
+\end{enumerate}
 
+\newpage
+\begin{problem}
+    The two-by-two system \vspace{-0.6em}
+    \begin{equation*}
+        \left\{
+            \begin{array}{c}
+                ax+by=e;\\
+                cx+dy=f,
+            \end{array}
+        \right. \vspace{-0.6em}
+    \end{equation*}
+    where $a, b, c, d, e, f$ are given, can be solved for $x$ and $y$ as follows:
+    \begin{enumerate}[label=\arabic*.]
+        \item Set $m=\dfrac{c}{a}$, provided $a\ne 0$;
+        \item $d_1=d-mb$;
+        \item $f_1=f-me$;
+        \item $y=\dfrac{f_1}{d_1}$; and then
+        \item $x=\dfrac{e-by}{a}$.
+    \end{enumerate}
+    Solve the following linear systems using four-digit rounding arithmetic.
+    \begin{enumerate}
+        \item $\displaystyle\left\{
+            \begin{array}{c}
+                1.130x-6.990y=14.20\\
+                1.013x+6.099y=14.22
+            \end{array}
+        \right.$
+        \item $\displaystyle\left\{
+            \begin{array}{r}
+                8.110x-12.20y=-0.1370\\
+                -18.11x+112.2y=-0.1376
+            \end{array}
+        \right.$
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Suppose one calculates in two-digit rounding arithmetic. A rectangular parallelepiped has sides of length $3$ cm, $4$ cm, and $5$ cm, measured to the nearest centimeter. What are the best upper and lower bounds for the volume of this parallelepiped? What are the best upper and lower bounds for the surface area?
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Find the rate of convergence of the following.
+    \begin{enumerate}
+        \item $\left\{\sin\left(\dfrac{1}{n^2}\right)\right\}_{n=1}^\infty $
+        \item $\left\{\left(\sin\left(\dfrac{1}{n}\right)\right)^2\right\}_{n=1}^\infty $
+        \item $\dfrac{\sin h}{h}$ as $h\to 0$
+        \item $\dfrac{1-e^h}{h}$ as $h\to 0$
+    \end{enumerate}
+\end{problem}
+\textbf{Solution}.
+
+\begin{problem}
+    Suppose that as $x$ approaches zero, \vspace{-0.6em}
+    \begin{equation*}
+        F_1(x)=L_1+O(x^\alpha)\qquad\text{and}\qquad F_2(x)=L_2+O(x^\beta). \vspace{-0.6em}
+    \end{equation*}
+    Let $c_1$ and $c_2$ be nonzero constants, and define \vspace{-0.6em}
+    \begin{equation*}
+        F(x)=c_1\:F_1(x)+c_2\:F_2(x)\qquad\text{and}\qquad G(x)=F_1(c_1x)+F_2(c_2x). \vspace{-0.6em}
+    \end{equation*}
+    Show that if $\gamma=\min\{\alpha, \beta\}$, then as $x$ approaches zero,
+    \begin{enumerate}
+        \item $F(x)=c_1L_1+c_2L_2+O(x^\gamma)$
+        \item $G(x)=L_1+L_2+O(x^\gamma)$.
+    \end{enumerate}
+\end{problem}
+\textbf{Proof}.
 
 \end{document}
