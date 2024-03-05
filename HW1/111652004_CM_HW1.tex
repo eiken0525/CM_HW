@@ -110,7 +110,7 @@
 \newpage
 \pagenumbering{arabic}
 
-\begin{problem}
+\begin{problem}\label{problem 1}
     Use the intermediate value theorem and Rolle's theorem to show the graph of \vspace{-0.6em}
     \begin{equation*}
         f(x)=x^3+2x+k \vspace{-0.6em}
@@ -119,7 +119,7 @@
 \end{problem}
 \textbf{Proof}. Let $k\in\mathbb R$. We first show that $f(x)=0$ has a root. Suppose $k=0$. Then, we can factorize $f(x)=x(x^2+2)$. Thus, it is clear that $f(x)=0$ has only one root $x=0$. Suppose $k>0$. Choose $x_1=0$ and $x_2=-k$. Then, $f(x_1)=k>0$ and $f(x_2)=-k^3-k<0$. By the intermediate value theorem, there exists a root between $x_1$ and $x_2$. Suppose $k<0$. Choose $x_3=0$ and $x_4=-k$. Then, $f(x_3)=k<0$ and $f(x_4)=-k^3-k>0$. By the intermediate value theorem, there exists a root between $x_3$ and $x_4$. We now show that there is only one root. Observe that $\dfrac{\dd f}{\dd x}(x)=3x^2+2>0$ for all $x\in\mathbb R$ regardless of the value of $k$. For the sake of contradiction, we suppose there are two distinct roots $\alpha$ and $\beta$ such that $f(\alpha)=f(\beta)=0$. By Rolle's theorem, there exists an $x_0$ between $\alpha$ and $\beta$ such that $\dfrac{\dd f}{\dd x}(x_0)=0$, a contradiction. Hence, there is only one root. \qed
 \newpage
-\begin{problem}
+\begin{problem}\label{problem 2}
     Find $\displaystyle\max_{a\leq x\leq b}|f(x)|$ for the following functions and intervals.
     \begin{enumerate}
         \item $f(x)=\dfrac{2-e^x+2x}{3}$, $[0, 1]$
@@ -134,7 +134,7 @@
 \end{enumerate}
 
 \newpage
-\begin{problem}
+\begin{problem}\label{problem 3}
     Find the second Taylor polynomial $P_2(x)$ for the function $f(x)=e^x\cos(x)$ about $x_0=0$.
     \begin{enumerate}
         \item Use $P_2(0.5)$ to approximate $f(0.5)$. Find an upper bound for error $|f(0.5)-P_2(0.5)|$ using the error formula, and compare it to the actual error.
@@ -143,18 +143,33 @@
         \item Find an upper bound for the error in (c) using $\displaystyle\int_{0}^{1}|P_2(x)|\ddi x$.
     \end{enumerate}
 \end{problem}
-\textbf{Solution}. By Taylor's theorem, the second Taylor polynomial about $0$ is \vspace{-0.6em}
+\textbf{Solution}. By Taylor's theorem, we have \vspace{-0.6em}
 \begin{align*}
-    P_2(x)&=f(0)+\dfrac{1}{1!}\cdot\dfrac{\dd f}{\dd x}(0)\cdot x+\dfrac{1}{2!}\cdot\dfrac{\dd^2 f}{\dd x^2}(0)\cdot x^2\\
-    &=1+x.
+    e^x\cos x&=f(0)+\dfrac{1}{1!}\cdot\dfrac{\dd f}{\dd x}(0)\cdot x+\dfrac{1}{2!}\cdot\dfrac{\dd^2 f}{\dd x^2}(0)\cdot x^2+\dfrac{1}{3!}\cdot\dfrac{\dd^3 f}{\dd x^3}(\xi(x))\cdot x^3\\
+    &=1+x+\dfrac{1}{6}\cdot\left(-2e^x\left(\sin \xi(x)+\cos \xi(x)\right) \right) \cdot x^3\\
+    &=1+x-\dfrac{\sqrt{2}}{3}\cdot e^{\xi(x)}\sin\left(\xi(x)+\dfrac{\pi}{4}\right) \cdot x^3\\[-3.4em]
 \end{align*}
+Hence, the second Taylor polynomial about $0$ is \vspace{-0.6em}
+\begin{equation*}
+    P_2(x)=1+x. \vspace{-0.6em}
+\end{equation*}
+\begin{enumerate}
+    \item The value of the second Taylor polynomial $P_2(0.5)=1.5$, and the true value $f(0.5)\approx1.446889$. We can estimate the upper bound of $|f(0.5)-P_2(0.5)|$ by \vspace{-0.6em}
+    \begin{align*}
+        |f(0.5)-P_2(0.5)|&=\left\lvert \dfrac{\sqrt{2}}{3}\cdot e^{\xi(0.5)}\sin\left(\xi(0.5)+\dfrac{\pi}{4}\right) \cdot ({0.5})^3\right\rvert\\
+        &\leq\left\lvert \dfrac{\sqrt{2}}{3}\cdot e^{0.5}\sin\left(0.5+\dfrac{\pi}{4}\right) \cdot ({0.5})^3\right\rvert\\
+        &\leq 0.093222005.\\[-3.4em]
+    \end{align*}
+    The actual error is $\left\lvert e^{0.5}\cos(0.5)-1.5\right\rvert\approx0.0531111$ and is smaller than the upper bound.
+    \item 
+\end{enumerate}
 
-\begin{problem}
+\begin{problem}\label{problem 4}
     Let $f(x)=\dfrac{1}{1-x}$ and $x_0=0$. Find the $n$-th Taylor polynomial $P_n(x)$ for $f(x)$ about $x_0$. Find a value of $n$ necessary for $P_n(x)$ to approximate $f(x)$ to within $10^{-6}$ on $[0, 0.5]$.
 \end{problem}
-\textbf{Solution}.
+\textbf{Solution}. Notice that $f(x)=\dfrac{1}{1-x}$ is the infinite sum of $\{x^k\}_{k=0}^\infty$. Hence, the $n$-th Taylor polynomial is $\displaystyle P_n(x)=1+x+\cdots+x^n$.
 
-\begin{problem}
+\begin{problem}\label{problem 5}
     Find the largest interval in which $p^\ast$ must lie to approximate $p$ with relative error at most $10^{-4}$ for each value of $p$.
     \begin{enumerate}
         \item $\pi$
@@ -165,7 +180,7 @@
 \end{problem}
 \textbf{Solution}.
 
-\begin{problem}
+\begin{problem}\label{problem 6}
     Let \vspace{-0.6em}
     \begin{equation*}
         f(x)=\dfrac{e^{x}-e^{-x}}{x}. \vspace{-0.6em}
@@ -179,7 +194,8 @@
 \end{problem}
 \textbf{Solution}.
 
-\begin{problem}
+\newpage
+\begin{problem}\label{problem 7}
     Use the 64-bit long real format to find the decimal equivalent of the following floating-point machine numbers.
     \begin{enumerate}
         \item $0\quad 10000001010\quad 1001001100000000000000000000000000000000000000000000$
@@ -199,7 +215,7 @@
 \end{enumerate}
 
 \newpage
-\begin{problem}
+\begin{problem}\label{problem 8}
     The two-by-two system \vspace{-0.6em}
     \begin{equation*}
         \left\{
@@ -235,11 +251,12 @@
 \end{problem}
 \textbf{Solution}.
 
-\begin{problem}
+\begin{problem}\label{problem 9}
     Suppose one calculates in two-digit rounding arithmetic. A rectangular parallelepiped has sides of length $3$ cm, $4$ cm, and $5$ cm, measured to the nearest centimeter. What are the best upper and lower bounds for the volume of this parallelepiped? What are the best upper and lower bounds for the surface area?
 \end{problem}
 \textbf{Solution}.
 
+\newpage
 \begin{problem}
     Find the rate of convergence of the following.
     \begin{enumerate}
@@ -250,8 +267,45 @@
     \end{enumerate}
 \end{problem}
 \textbf{Solution}.
+\begin{enumerate}
+    \item Notice that $\left\{\sin\left(\dfrac{1}{n^2}\right)\right\}_{n=1}^\infty\to 0$. Choose $\{\beta_n\}=\left\{\dfrac{1}{n^2}\right\}$, which converges to $0$. Choose $K=1$. Then, \vspace{-0.6em}
+    \begin{align*}
+        \left\lvert\sin\left(\dfrac{1}{n^2}\right)-0\right\rvert&=\left\lvert\sin\left(\dfrac{1}{n^2}\right)\right\rvert\\
+        &<1\cdot\dfrac{1}{n^2}\\[-3.4em]
+    \end{align*}
+    for all $n\in\mathbb{N}$. Hence, $\left\{\sin\left(\dfrac{1}{n^2}\right)\right\}_{n=1}^\infty$ converges to $0$ with a rate of convergence $\mathcal{O}\left(\dfrac{1}{n^2}\right)$.
+    \item Notice that $\left\{\left(\sin\left(\dfrac{1}{n}\right)\right)^2\right\}_{n=1}^\infty\to 0$. Choose $\{\beta_n\}=\left\{\dfrac{1}{n^2}\right\}$, which converges to $0$. Choose $K=1$. Then, \vspace{-0.6em}
+    \begin{align*}
+        \left\lvert\left(\sin\left(\dfrac{1}{n}\right)\right)^2-0\right\rvert&=\left(\sin\left(\dfrac{1}{n}\right)\right)^2\\
+        &<\left(\dfrac{1}{n}\right)^2\\
+        &=1\cdot\dfrac{1}{n^2}\\[-3.4em]
+    \end{align*}
+    for all $n\in\mathbb{N}$. Hence, $\left\{\left(\sin\left(\dfrac{1}{n}\right)\right)^2\right\}_{n=1}^\infty$ converges to $0$ with a rate of convergence $\mathcal{O}\left(\dfrac{1}{n^2}\right)$.
+    \item Notice that $\displaystyle\lim_{h\to 0}\dfrac{\sin h}{h}=1$. Choose $G(h)=h^2$, of which the limit is $0$ as $h\downarrow 0$. Choose $K=1$. We first Taylor expend $\sin h$ about $x_0=0$: \vspace{-0.6em}
+    \begin{equation*}
+        \sin h\approx h-\dfrac{h^3}{6}+\mathcal{O}(h^5). \vspace{-0.6em}
+    \end{equation*}
+    Then, \vspace{-0.6em}
+    \begin{align*}
+        \left\lvert \dfrac{\sin h}{h}-1\right\rvert&=\left\lvert \dfrac{-\dfrac{h^3}{6}+\mathcal{O}(h^5)}{h}\right\rvert\\
+        &<1\cdot h^2+\mathcal{O}(h^4)\\[-3.4em]
+    \end{align*}
+    for $h\in(0, 1)$. Note that $h^2+\mathcal{O}(h^4)=\mathcal{O}(h^2)$. Hence, $\displaystyle\lim_{h\to 0}\dfrac{\sin h}{h}=1$ with a rate of convergence $\mathcal{O}(h^2)$.
+    \item Notice that $\displaystyle\lim_{h\to 0}\dfrac{1-e^h}{h}=-1$. Choose $G(h)=h$, of which the limit is $0$ as $h\downarrow 0$. Choose $K=1$. We first Taylor expend $e^h$ about $x_0=0$: \vspace{-0.6em}
+    \begin{equation*}
+        e^h\approx1+\dfrac{h}{1!}+\dfrac{h^2}{2!}+\mathcal{O}(h^3). \vspace{-0.6em}
+    \end{equation*}
+    Then, \vspace{-0.6em}
+    \begin{align*}
+        \left\lvert \dfrac{1-e^h}{h}-(-1)\right\rvert&=\left\lvert \dfrac{1-e^h+h}{h}\right\rvert\\
+        &=\dfrac{\dfrac{h^2}{2}+\mathcal{O}(h^3)}{h}\\
+        &<1\cdot h+\mathcal{O}(h^2)\\[-3.4em]
+    \end{align*}
+    for $h\in(0, 1)$. Hence, $\displaystyle\lim_{h\to 0}\dfrac{1-e^h}{h}=-1$ with a rate of convergence $\mathcal{O}(h)$. \qed
+\end{enumerate}
 
-\begin{problem}
+\newpage
+\begin{problem}\label{problem 10}
     Suppose that as $x$ approaches zero, \vspace{-0.6em}
     \begin{equation*}
         F_1(x)=L_1+O(x^\alpha)\qquad\text{and}\qquad F_2(x)=L_2+O(x^\beta). \vspace{-0.6em}

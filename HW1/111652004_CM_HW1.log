@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.3)  5 MAR 2024 18:23
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.3)  5 MAR 2024 20:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -764,36 +764,40 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: Not enough space on this page on input line 145.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 152.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 157.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 168.
-Package mdframed Info: Not enough space on this page on input line 179.
+(mdframed)              on input line 167.
+Package mdframed Info: Not enough space on this page on input line 169.
  [3]
-Package mdframed Info: Not enough space on this page on input line 179.
+Package mdframed Info: Not enough space on this page on input line 169.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 182.
+(mdframed)              on input line 172.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 183.
  [4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 202.
-Package mdframed Info: Not enough space on this page on input line 235.
+(mdframed)              on input line 198.
+Package mdframed Info: Not enough space on this page on input line 206.
+ [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 238.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 243.
+(mdframed)              on input line 218.
+Package mdframed Info: Not enough space on this page on input line 251.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 254.
- [5]
+ [6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 260.
 Package mdframed Info: Not enough space on this page on input line 268.
- [6] (111652004_CM_HW1.aux)
+ [7] [8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 308.
+Package mdframed Info: Not enough space on this page on input line 322.
+ [9] (111652004_CM_HW1.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
@@ -802,12 +806,12 @@ Package rerunfilecheck Info: File `111652004_CM_HW1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22209 strings out of 411164
- 405230 string characters out of 5814263
- 1859394 words of memory out of 5000000
- 42418 multiletter control sequences out of 15000+600000
+ 22219 strings out of 411164
+ 405341 string characters out of 5814263
+ 1863394 words of memory out of 5000000
+ 42428 multiletter control sequences out of 15000+600000
  520633 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,12n,107p,1056b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW1.xdv (7 pages, 47080 bytes).
+Output written on 111652004_CM_HW1.xdv (10 pages, 62896 bytes).
