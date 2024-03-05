@@ -1,0 +1,118 @@
+% LaTeX Template For MATH 490 @ VCU
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{extarrows}
+
+\setlist{nosep}
+\setlist[enumerate]{label=\alph*.}
+
+\renewcommand{\arraystretch}{0.75}
+
+\definecolor{defcolor}{RGB}{255,236,236}    % light red
+\definecolor{ngtcolor}{RGB}{255,242,242}    % lighter red
+\definecolor{lnkcolor}{RGB}{0,0,180}        % blue
+\definecolor{thmcolor}{RGB}{236,236,255}    % light blue
+\definecolor{lemcolor}{RGB}{239,239,255}    % lighter blue
+\definecolor{procolor}{RGB}{242,242,255}    % lighter lighter blue
+\definecolor{crlcolor}{RGB}{245,245,255}    % lighter lighter lighter blue
+\definecolor{xmpcolor}{RGB}{255,240,225}    % light orange
+\definecolor{rmkcolor}{RGB}{233,255,235}    % light green
+\definecolor{axicolor}{RGB}{255,255,233}    % light yellow
+\definecolor{notcolor}{RGB}{255,255,244}    % lighter yellow
+\definecolor{whacolor}{RGB}{250,250,250}    % lighter gray
+\definecolor{reccolor}{RGB}{255,244,255}    % lighter purple
+
+\hypersetup{
+    colorlinks,
+    citecolor=lnkcolor,
+    filecolor=lnkcolor,
+    linkcolor=lnkcolor,
+    urlcolor=lnkcolor
+}
+
+\newtheoremstyle{break}
+    {\topsep/1.5} % space above
+    {\topsep/2.2} % space below
+    {}          % body font
+    {}          % indent amount
+    {\rmfamily} % theorem head font
+    {\textbf{.}}          % punctuation after theorem head
+    {\newline}  % space after theorem head
+    {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{\text{ (#3)}}}
+                % theorem hed spec. (empty = "normal")
+
+\theoremstyle{break}
+\newmdtheoremenv{theorem}{Theorem}
+\newmdtheoremenv{corollary}[theorem]{Corollary}
+\newmdtheoremenv{lemma}[theorem]{Lemma}
+\newmdtheoremenv{axiom}[theorem]{Axiom}
+\newmdtheoremenv{notation}[theorem]{Notation}
+\newmdtheoremenv{definition}[theorem]{Definition}
+\newmdtheoremenv{remark}[theorem]{Remark}
+\newmdtheoremenv{example}[theorem]{Example}
+\newmdtheoremenv{problem}[theorem]{Problem}
+\newmdtheoremenv{question}[theorem]{Question}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator{\boundary}{bd}
+
+\newcommand{\dd}{\text{d}}
+\newcommand{\ddi}{\text{$\,$d}}
+\newcommand{\qqed}{{\hfill$\blacksquare$}}
+\newcommand{\defeq}{\overset{\text{def}}{=}}
+\newcommand{\transpose}{\text{T}}
+
+\linespread{1.9}
+\setlength{\textwidth}{6.9in}
+\setlength{\textheight}{9.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\topmargin}{-0.2in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\footskip}{0.5in}
+\setlength{\multicolsep}{6.2pt}
+\setlength{\belowdisplayskip}{0pt}
+%\setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt}
+%\setlength{\abovedisplayshortskip}{0pt}
+
+\setcounter{section}{0}
+\numberwithin{equation}{theorem}
+
+\makeatletter
+\newcommand{\vast}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
+\makeatother
+\title{Homework 1 of Computational Mathematics}
+\author{Chang, Yung-Hsuan\\111652004\\Department of Applied Mathematics}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+\pagenumbering{arabic}
+
+\begin{problem}
+    The car Jack wants to buy comes in four colours; with or without air conditioning; with five different options for stereo systems; and a choice of none, two, or four floor mats. If the dealership he visits has three cars in the lot, each with different options, what is the probability that one of the cars they have in stock has exactly the options he wants?
+\end{problem}
+\textbf{Solution}.
+
+\end{document}
