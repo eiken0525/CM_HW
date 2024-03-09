@@ -206,14 +206,13 @@ Hence, the second Taylor polynomial about $0$ is \vspace{-0.6em}
 \begin{problem}\label{problem 4}
     Let $f(x)=\dfrac{1}{1-x}$ and $x_0=0$. Find the $n$-th Taylor polynomial $P_n(x)$ for $f(x)$ about $x_0$. Find a value of $n$ necessary for $P_n(x)$ to approximate $f(x)$ to within $10^{-6}$ on $[0, 0.5]$.
 \end{problem}
-\textbf{Solution}. Notice that $f(x)=\dfrac{1}{1-x}$ is the infinite sum of $\{x^k\}_{k=0}^\infty$. Hence, the $n$-th Taylor polynomial is $\displaystyle P_n(x)=1+x+\cdots+x^n$. We would like to find an $n\in\mathbb{N}$ such that $|P_n(x)-f(x)|<10^{-6}$ for all $x\in[0, 0.5]$. Observe that $f(x)>P_n(x)$ for all $x\in[0, 5]$, and $\dfrac{\dd}{\dd x}\left(f(x)-P_n(x)\right)\geq 0$ for all $x\in[0, 0.5]$. Hence, \vspace{-0.6em}
+\textbf{Solution}. Notice that $f(x)=\dfrac{1}{1-x}$ is the infinite sum of $\{x^k\}_{k=0}^\infty$. Hence, the $n$-th Taylor polynomial is $\displaystyle P_n(x)=1+x+\cdots+x^n$, and the remainder $R_n=(\xi(x))^{n+1}$. We would like to find an $n\in\mathbb{N}$ such that $|P_n(x)-f(x)|<10^{-6}$ for all $x\in[0, 0.5]$. Observe that $f(x)>P_n(x)$ for all $x\in[0, 5]$, and $\dfrac{\dd}{\dd x}\left(f(x)-P_n(x)\right)\geq 0$ for all $x\in[0, 0.5]$. Hence, \vspace{-0.6em}
 \begin{align*}
-    \sup_{x\in[0, 0.5]}|P_n(x)-f(x)|&=f(0.5)-P_n(0.5)\\
-    &=2-\sum_{i=0}^{n}(0.5)^i\\
-    &=2-\dfrac{1-0.5^{n+1}}{1-0.5}\\
-    &=0.5^n.\\[-3.4em]
+    \sup_{x\in[0, 0.5]}|P_n(x)-f(x)|&=\sup_{x\in[0, 0.5]}|R_n(x)|\\
+    &=\sup_{x\in[0, 0.5]}x^{n+1}\\
+    &=0.5^{n+1}.\\[-3.4em]
 \end{align*}
-Set $0.5^n<10^{-6}$. Then, we obtain that $n$ must be greater than $19.5$. Hence, we choose $n=20$. \qed
+Set $0.5^{n+1}<10^{-6}$. Then, we obtain that $n$ must be greater than $18.5$. Hence, we choose $n=19$. \qed
 
 \newpage
 \begin{problem}\label{problem 5}
