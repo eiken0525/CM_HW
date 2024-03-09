@@ -1,13 +1,13 @@
 # Fdb version 4
-["xdvipdfmx"] 1709996830 "111652004_CM_HW1.xdv" "111652004_CM_HW1.pdf" "111652004_CM_HW1" 1709996830 0
-  "111652004_CM_HW1.xdv" 1709996830 101132 7189bc53af7501e0deccce5612d5fc3e "xelatex"
+["xdvipdfmx"] 1709997391 "111652004_CM_HW1.xdv" "111652004_CM_HW1.pdf" "111652004_CM_HW1" 1709997392 0
+  "111652004_CM_HW1.xdv" 1709997391 100996 43c76e33de24790c23a7f69979c79b70 "xelatex"
   (generated)
   "111652004_CM_HW1.pdf"
   (rewritten before read)
-["xelatex"] 1709996828 "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW1/111652004_CM_HW1.tex" "111652004_CM_HW1.xdv" "111652004_CM_HW1" 1709996830 0
-  "111652004_CM_HW1.aux" 1709996830 1129 5d629befea022d0e887de3bb5cec50c9 "xelatex"
-  "111652004_CM_HW1.out" 1709996830 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW1.tex" 1709996828 24431 204d9cdd4a58f365d82a3e6c021471f4 ""
+["xelatex"] 1709997390 "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW1/111652004_CM_HW1.tex" "111652004_CM_HW1.xdv" "111652004_CM_HW1" 1709997392 0
+  "111652004_CM_HW1.aux" 1709997391 1129 5d629befea022d0e887de3bb5cec50c9 "xelatex"
+  "111652004_CM_HW1.out" 1709997391 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW1.tex" 1709997389 24406 a1e5fc3b5455f71e81b5b896ec26ac55 ""
   "C:/Users/yungh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1688385619 36484932 d804c504e3d64c1e236529bf483411b3 ""
   "D:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -162,7 +162,7 @@
   "D:/Program Files/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
   "P3d1.png" 1709995265 34214 b0e6682ac25c305a792fbdfec9bdaa7f ""
   "P3d2.png" 1709995581 32887 a36f4e50c0083d7ed4bceaab64283ff3 ""
-  "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW1/111652004_CM_HW1.tex" 1709996828 24431 204d9cdd4a58f365d82a3e6c021471f4 ""
+  "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW1/111652004_CM_HW1.tex" 1709997389 24406 a1e5fc3b5455f71e81b5b896ec26ac55 ""
   (generated)
   "111652004_CM_HW1.aux"
   "111652004_CM_HW1.log"
