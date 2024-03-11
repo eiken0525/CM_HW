@@ -195,11 +195,9 @@ Hence, the second Taylor polynomial about $0$ is \vspace{-0.6em}
     where $\overset{\mathcal{M}}{\approx}$ suggests that the value is computed and approximated by MATLAB. See Figure 3.d.1.
     \begin{center}
         \includegraphics[width=0.8\textwidth]{P3d1.png}\\
-        Figure 3.d.1.\\\vspace{1.9em}
-        \includegraphics[width=0.8\textwidth]{P3d2.png}\\
-        Figure 3.d.2.
+        Figure 3.d.1.
     \end{center}
-    The actual error is approximately $0.1220$, which is computed and approximated by MATLAB as well. See Figure 3.d.2. \qed
+    Hence, an upper bound is $0.27$. \qed
 \end{enumerate}
 
 \newpage
@@ -380,21 +378,21 @@ whenever $p\geq 0$. Hence, by the fact that all $p^\ast$'s are greater than $0$,
 \begin{problem}\label{problem 10}
     Find the rate of convergence of the following.
     \begin{enumerate}
-        \item $\left\{\sin\left(\dfrac{1}{n^2}\right)\right\}_{n=1}^\infty $
-        \item $\left\{\left(\sin\left(\dfrac{1}{n}\right)\right)^2\right\}_{n=1}^\infty $
-        \item $\dfrac{\sin h}{h}$ as $h\to 0$
-        \item $\dfrac{1-e^h}{h}$ as $h\to 0$
+        \item $\displaystyle\lim_{n\to\infty}\sin\left(\dfrac{1}{n^2}\right)$
+        \item $\displaystyle\lim_{n\to\infty}\left(\sin\left(\dfrac{1}{n}\right)\right)^2$
+        \item $\displaystyle\lim_{h\to 0}\dfrac{\sin h}{h}$
+        \item $\displaystyle\lim_{h\to 0}\dfrac{1-e^h}{h}$
     \end{enumerate}
 \end{problem}
 \textbf{Solution}.
 \begin{enumerate}
-    \item Notice that $\left\{\sin\left(\dfrac{1}{n^2}\right)\right\}_{n=1}^\infty\to 0$. Choose $\{\beta_n\}=\left\{\dfrac{1}{n^2}\right\}$, which converges to $0$. Choose $K=1$. Then, \vspace{-0.6em}
+    \item Notice that $\displaystyle\lim_{n\to\infty}\sin\left(\dfrac{1}{n^2}\right)=0$. Choose $\{\beta_n\}=\left\{\dfrac{1}{n^2}\right\}$, which converges to $0$. Choose $K=1$. Then, \vspace{-0.6em}
     \begin{align*}
         \left\lvert\sin\left(\dfrac{1}{n^2}\right)-0\right\rvert&=\left\lvert\sin\left(\dfrac{1}{n^2}\right)\right\rvert\\
         &<1\cdot\dfrac{1}{n^2}\\[-3.4em]
     \end{align*}
     for all $n\in\mathbb{N}$. Hence, $\left\{\sin\left(\dfrac{1}{n^2}\right)\right\}_{n=1}^\infty$ converges to $0$ with a rate of convergence $\mathcal{O}\left(\dfrac{1}{n^2}\right)$.
-    \item Notice that $\left\{\left(\sin\left(\dfrac{1}{n}\right)\right)^2\right\}_{n=1}^\infty\to 0$. Choose $\{\beta_n\}=\left\{\dfrac{1}{n^2}\right\}$, which converges to $0$. Choose $K=1$. Then, \vspace{-0.6em}
+    \item Notice that $\displaystyle\lim_{n\to\infty}\left(\sin\left(\dfrac{1}{n}\right)\right)^2=0$. Choose $\{\beta_n\}=\left\{\dfrac{1}{n^2}\right\}$, which converges to $0$. Choose $K=1$. Then, \vspace{-0.6em}
     \begin{align*}
         \left\lvert\left(\sin\left(\dfrac{1}{n}\right)\right)^2-0\right\rvert&=\left(\sin\left(\dfrac{1}{n}\right)\right)^2\\
         &<\left(\dfrac{1}{n}\right)^2\\
@@ -403,37 +401,88 @@ whenever $p\geq 0$. Hence, by the fact that all $p^\ast$'s are greater than $0$,
     for all $n\in\mathbb{N}$. Hence, $\left\{\left(\sin\left(\dfrac{1}{n}\right)\right)^2\right\}_{n=1}^\infty$ converges to $0$ with a rate of convergence $\mathcal{O}\left(\dfrac{1}{n^2}\right)$.
     \item Notice that $\displaystyle\lim_{h\to 0}\dfrac{\sin h}{h}=1$. Choose $G(h)=h^2$, of which the limit is $0$ as $h\downarrow 0$. Choose $K=1$. We first Taylor expend $\sin h$ about $x_0=0$: \vspace{-0.6em}
     \begin{equation*}
-        \sin h\approx h-\dfrac{h^3}{6}+\mathcal{O}(h^5). \vspace{-0.6em}
+        \sin h\approx h-\dfrac{h^3}{3!}+\dfrac{h^5}{5!}-\cdots. \vspace{-0.6em}
     \end{equation*}
     Then, \vspace{-0.6em}
     \begin{align*}
-        \left\lvert \dfrac{\sin h}{h}-1\right\rvert&=\left\lvert \dfrac{-\dfrac{h^3}{6}+\mathcal{O}(h^5)}{h}\right\rvert\\
+        \left\lvert \dfrac{\sin h}{h}-1\right\rvert&=\left\lvert -\dfrac{h^2}{3!}+\dfrac{h^4}{5!}-\cdots\right\rvert\\
         &<1\cdot h^2+\mathcal{O}(h^4)\\[-3.4em]
     \end{align*}
     for $h\in(0, 1)$. Note that $h^2+\mathcal{O}(h^4)=\mathcal{O}(h^2)$. Hence, $\displaystyle\lim_{h\to 0}\dfrac{\sin h}{h}=1$ with a rate of convergence $\mathcal{O}(h^2)$.
     \item Notice that $\displaystyle\lim_{h\to 0}\dfrac{1-e^h}{h}=-1$. Choose $G(h)=h$, of which the limit is $0$ as $h\downarrow 0$. Choose $K=1$. We first Taylor expend $e^h$ about $x_0=0$: \vspace{-0.6em}
     \begin{equation*}
-        e^h\approx1+\dfrac{h}{1!}+\dfrac{h^2}{2!}+\mathcal{O}(h^3). \vspace{-0.6em}
+        e^h\approx1+\dfrac{h}{1!}+\dfrac{h^2}{2!}+\dfrac{h^3}{3!}+\cdots. \vspace{-0.6em}
     \end{equation*}
     Then, \vspace{-0.6em}
     \begin{align*}
         \left\lvert \dfrac{1-e^h}{h}-(-1)\right\rvert&=\left\lvert \dfrac{1-e^h+h}{h}\right\rvert\\
-        &=\dfrac{\dfrac{h^2}{2}+\mathcal{O}(h^3)}{h}\\
+        &=\dfrac{h}{2!}+\dfrac{h^2}{3!}+\cdots\\
         &<1\cdot h+\mathcal{O}(h^2)\\[-3.4em]
     \end{align*}
     for $h\in(0, 1)$. Hence, $\displaystyle\lim_{h\to 0}\dfrac{1-e^h}{h}=-1$ with a rate of convergence $\mathcal{O}(h)$. \qed
 \end{enumerate}
 
 \newpage
+\setcounter{theorem}{0}
+\renewcommand*{\thetheorem}{\Alph{theorem}}
+
+\begin{definition}[$\mathcal{O}$-Notation]
+    Suppose $f$ and $g$ are real-valued functions defined on the same set of nonnegative real numbers. We say $f$ is of order at most $g$, written $f(h)=\mathcal{O}(g(h))$, if and only if there exists an $M>0$ and a small $\delta>0$ such that $|f(h)|\leq M|g(h)|$ for all $h\in[0, \delta)$.
+\end{definition}
+
+\begin{theorem}
+    For $h$ approaching zero,
+    \begin{enumerate}
+        \item $c\:\mathcal{O}(h^r)=\mathcal{O}(h^r)$ for all $c\ne0$ for all $r\in\mathbb R$;
+        \item $\mathcal{O}((ch)^r)=\mathcal{O}(h^r)$ for all $c\ne0$ for all $r\in\mathbb R$; and
+        \item $\mathcal{O}(h^a)+\mathcal{O}(h^b)=\mathcal{O}(h^c)$, where $c=\min\{a, b\}$.
+    \end{enumerate}
+    Note that the ``$=$'' here means inclusion ($\subseteq$) instead of implying two sets are equal.
+\end{theorem}
+\begin{enumerate}
+    \item Let $c\in\mathbb{R}\setminus\{0\}$. Let $f\in c\:\mathcal{O}(h^r)$. Then, there exists an $M_0>0$ and exists a small $\delta>0$ such that \vspace{-0.6em}
+    \begin{equation*}
+        |f(h)|\leq |c|M_0|h^r| \vspace{-0.6em}
+    \end{equation*}
+    for all $h\in[0, \delta)$. Choose $M=|c|M_0+1$. Then, \vspace{-0.6em}
+    \begin{equation*}
+        |f(h)|\leq M|h^r|, \vspace{-0.6em}
+    \end{equation*}
+    which implies $f(h)\in\mathcal{O}(h^r)$. That is, $c\:\mathcal{O}(h^r)=\mathcal{O}(h^r)$.
+    \item Let $c\in\mathbb{R}\setminus\{0\}$. Let $f\in \mathcal{O}((ch)^r)$. Then, there exists an $M_0>0$ and exists a small $\delta>0$ such that \vspace{-0.6em}
+    \begin{equation*}
+        |f(h)|\leq M_0|(ch)^r|=M_0|c|^r|h^r| \vspace{-0.6em}
+    \end{equation*}
+    for all $h\in[0, \delta)$. Choose $M=|c|^rM_0+1$. Then, \vspace{-0.6em}
+    \begin{equation*}
+        |f(h)|\leq M|h^r|, \vspace{-0.6em}
+    \end{equation*}
+    which implies $f(h)\in\mathcal{O}(h^r)$. That is, $\mathcal{O}((ch)^r)=\mathcal{O}(h^r)$.
+    \item With loss of generality, suppose $a>b$. Let $f\in\mathcal{O}(h^a)$. Let $g\in\mathcal{O}(h^b)$. Then, it is clear that \vspace{-0.6em}
+    \begin{equation}
+        g(h)\geq f(h) \vspace{-0.6em}
+    \end{equation}
+    for all $h\in[0 ,\delta)$ for some small $\delta\in(0, 1)$. Hence, \vspace{-0.6em}
+    \begin{align}
+        f(h)+g(h)&\leq 2\cdot g(h)\\
+        &=2\:\mathcal{O}(h^b)\\
+        &=\mathcal{O}(h^b),\\[-3.4em]\notag
+    \end{align}
+    where (B.2) follows from (B.1), (B.3) follows from assumption, and (B.4) follows from Theorem B.a. \qed
+\end{enumerate}
+
+\newpage
+\setcounter{theorem}{10}
+\renewcommand*{\thetheorem}{\arabic{theorem}}
 \begin{problem}\label{problem 11}
     Suppose that as $x$ approaches zero, \vspace{-0.6em}
-    \begin{equation*}
+    \begin{equation}
         F_1(x)=L_1+\mathcal{O}(x^\alpha)\qquad\text{and}\qquad F_2(x)=L_2+\mathcal{O}(x^\beta). \vspace{-0.6em}
-    \end{equation*}
+    \end{equation}
     Let $c_1$ and $c_2$ be nonzero constants, and define \vspace{-0.6em}
-    \begin{equation*}
+    \begin{equation}
         F(x)=c_1\:F_1(x)+c_2\:F_2(x)\qquad\text{and}\qquad G(x)=F_1(c_1x)+F_2(c_2x). \vspace{-0.6em}
-    \end{equation*}
+    \end{equation}
     Show that if $\gamma=\min\{\alpha, \beta\}$, then as $x$ approaches zero,
     \begin{enumerate}
         \item $F(x)=c_1L_1+c_2L_2+\mathcal{O}(x^\gamma)$
@@ -442,18 +491,22 @@ whenever $p\geq 0$. Hence, by the fact that all $p^\ast$'s are greater than $0$,
 \end{problem}
 \textbf{Proof}.
 \begin{enumerate}
-    \item \begin{align*}
+    \item The proof is based on Theorem B. \vspace{-0.6em}
+    \begin{align}
         F(x)&=c_1\:F_1(x)+c_2\:F_2(x)\\
         &=c_1(L_1+\mathcal{O}(x^\alpha))+c_2(L_2+\mathcal{O}(x^\beta))\\
         &=c_1L_1+c_2L_2+\mathcal{O}(x^\alpha)+\mathcal{O}(x^\beta)\\
-        &=c_1L_1+c_2L_2+\mathcal{O}(x^\gamma).
-    \end{align*}
-    \item \begin{align*}
+        &=c_1L_1+c_2L_2+\mathcal{O}(x^\gamma),\\[-3.4em]\notag
+    \end{align}
+    where (11.3) follows from definition provided in (a), (11.4) follows from (11.1), (11.5) follows from Theorem B.a, and (11.6) follows from Theorem B.c.
+    \item The proof is based on Theorem B. \vspace{-0.6em}
+    \begin{align}
         G(x)&=F_1(c_1x)+F_2(c_2x)\\
         &=L_1+\mathcal{O}((c_1x)^\alpha)+L_2+\mathcal{O}((c_2x)^\beta)\\
         &=L_1+L_2+\mathcal{O}(x^\alpha)+\mathcal{O}(x^\beta)\\
-        &=L_1+L_2+\mathcal{O}(x^\gamma).
-    \end{align*}\qed
+        &=L_1+L_2+\mathcal{O}(x^\gamma),\\[-3.4em]\notag
+    \end{align}
+    where (11.7) follows from definition provided in (b), (11.8) follows from (11.1), (11.9) follows from Theorem B.b, and (11.10) follows from Theorem B.c. \qed
 \end{enumerate}
 
 \end{document}
