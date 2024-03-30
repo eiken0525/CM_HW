@@ -145,7 +145,7 @@ Then,
 \begin{center}
     \includegraphics[width=0.9\textwidth]{problem_2_py.png}
 \end{center}
-Using the Bisection method, by Python, $p=1.37866$. \qed
+Using the bisection method, by Python, $p=1.37866$. \qed
 
 
 \newpage
@@ -167,7 +167,7 @@ For c, choose ${g_3}(x)=x-\dfrac{x^4-21x}{x^2-21}=\dfrac{x^3-x^4}{x^2-21}$. Then
 \begin{problem}\label{problem 4}
     Use Theorem 2.3 to show that $g(x)=2^{-x}$ has a unique fixed point on $\left[\dfrac{1}{3}, 1\right]$. Use fixed-point iteration to find an approximation to the fixed point accurate to within $10^{-4}$. Use corollary 2.5 to estimate the number of iterations required to achieve $10^{-4}$ accuracy, and compare this theoratical estimate the the number actually needed.
 \end{problem}
-\textbf{Solution}. We know that $g\in C\left[\dfrac{1}{3}, 1\right]$ and $g(x)\in[0.5, 0.9637]\subseteq\left[\dfrac{1}{3}, 1\right]$. Then $g$ has at least a fixed point in $[a, b]$. Moreover, $g'(x)$ exists on $\left(\dfrac{1}{3}, 1\right)$. Choose $k=0.7$. Then
+\textbf{Solution}. We know that $g\in C\left[\dfrac{1}{3}, 1\right]$ and $g(x)\in[0.5, 0.9637]\subseteq\left[\dfrac{1}{3}, 1\right]$ for all $x\in\left[\dfrac{1}{3}, 1\right]$. Then $g$ has at least a fixed point in $[a, b]$. Moreover, $g'(x)$ exists on $\left(\dfrac{1}{3}, 1\right)$. Choose $k=0.7$. Then
 \begin{align*}
     \left|\dfrac{\dd}{\dd x}2^{-x}\right|&=\ln2\cdot 2^{-x}\\
     &<\ln2\cdot 2^{-0}\\
