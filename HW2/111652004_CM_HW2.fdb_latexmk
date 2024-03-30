@@ -1,17 +1,18 @@
 # Fdb version 4
-["xdvipdfmx"] 1711794642 "111652004_CM_HW2.xdv" "111652004_CM_HW2.pdf" "111652004_CM_HW2" 1711794643 0
-  "111652004_CM_HW2.xdv" 1711794642 81604 95c6bc9f09d5bd42b68a0407de4e24dd "xelatex"
+["xdvipdfmx"] 1711800897 "111652004_CM_HW2.xdv" "111652004_CM_HW2.pdf" "111652004_CM_HW2" 1711800898 0
+  "111652004_CM_HW2.xdv" 1711800897 107236 fffe40bfaddfe6bcccc2c7c1904a112e "xelatex"
   (generated)
   "111652004_CM_HW2.pdf"
   (rewritten before read)
-["xelatex"] 1711794641 "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" "111652004_CM_HW2.xdv" "111652004_CM_HW2" 1711794643 0
-  "111652004_CM_HW2.aux" 1711794642 1073 644ad3d57ba9a2b6cf93e1b26f083274 "xelatex"
-  "111652004_CM_HW2.out" 1711794642 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW2.tex" 1711794640 16485 a483cb26a1b363cc58cd8a9881ab9d73 ""
+["xelatex"] 1711800896 "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" "111652004_CM_HW2.xdv" "111652004_CM_HW2" 1711800898 0
+  "111652004_CM_HW2.aux" 1711800897 1073 48b26f2510036471216c25e580b4d193 "xelatex"
+  "111652004_CM_HW2.out" 1711800897 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW2.tex" 1711800894 22154 ccd9a02d12d242df737bfb7e2aa7a637 ""
   "C:/Users/yungh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1688385619 36484932 d804c504e3d64c1e236529bf483411b3 ""
   "D:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1234365220 996 a18840b13b499c08ac2de96a99eda4bc ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233951854 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
@@ -23,13 +24,16 @@
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi9.tfm" 1136765053 1524 d89e2d087a9828407a196f428428ef4a ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136765053 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "D:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy9.tfm" 1136765053 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "D:/Program Files/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "D:/Program Files/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "D:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -160,11 +164,15 @@
   "D:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "D:/Program Files/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "D:/Program Files/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" 1711794640 16485 a483cb26a1b363cc58cd8a9881ab9d73 ""
+  "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" 1711800894 22154 ccd9a02d12d242df737bfb7e2aa7a637 ""
+  "problem_10b_py.png" 1711797817 59057 5e96a26fa94c643d1d288db0b59f8662 ""
+  "problem_11b_py.png" 1711799234 54611 e10bff385b8dd4f1b29425307409be4b ""
+  "problem_11e_py.png" 1711800848 82844 27b2be62fd6d57a3557c387e40bcce3f ""
   "problem_2_py.png" 1711115178 60100 25121f2baab16665ed001195bbb92cb9 ""
   "problem_4_py.png" 1711117238 46490 73c11b8032842363c84a379b434f442e ""
   "problem_7a_py.png" 1711793637 37401 563be17005e41f99218d9bc012424225 ""
   "problem_7b_py.png" 1711794423 46378 470baaa348af25ba793a8cacf88ace93 ""
+  "problem_8_py.png" 1711796253 60473 5eea65c9e7a62fcfeb578f240670b982 ""
   (generated)
   "111652004_CM_HW2.aux"
   "111652004_CM_HW2.log"
