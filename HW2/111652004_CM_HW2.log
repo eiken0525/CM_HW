@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.3)  22 MAR 2024 22:22
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.3)  30 MAR 2024 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -767,45 +767,45 @@ Package mdframed Info: Not enough space on this page on input line 154.
  [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 159.
-Package mdframed Info: Not enough space on this page on input line 161.
+(mdframed)              on input line 161.
+Package mdframed Info: Not enough space on this page on input line 163.
 File: problem_4_py.png Graphic file (type bmp)
 <problem_4_py.png>
  [4] [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 185.
-Package mdframed Info: Not enough space on this page on input line 191.
+(mdframed)              on input line 187.
+Package mdframed Info: Not enough space on this page on input line 193.
  [6]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 196.
-Package mdframed Info: Not enough space on this page on input line 202.
- [7]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 207.
-Package mdframed Info: Not enough space on this page on input line 213.
- [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 218.
 Package mdframed Info: Not enough space on this page on input line 224.
- [9]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 229.
-Package mdframed Info: Not enough space on this page on input line 234.
- [10]
+ [7]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 239.
-Package mdframed Info: Not enough space on this page on input line 247.
+Package mdframed Info: Not enough space on this page on input line 245.
+ [8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 250.
+Package mdframed Info: Not enough space on this page on input line 256.
+ [9]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 261.
+Package mdframed Info: Not enough space on this page on input line 266.
+ [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 285.
+Package mdframed Info: Not enough space on this page on input line 293.
  [11]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 252.
-Package mdframed Info: Not enough space on this page on input line 261.
+(mdframed)              on input line 298.
+Package mdframed Info: Not enough space on this page on input line 307.
  [12] (111652004_CM_HW2.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -815,12 +815,12 @@ Package rerunfilecheck Info: File `111652004_CM_HW2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22239 strings out of 411164
- 405748 string characters out of 5814263
- 1855394 words of memory out of 5000000
- 42443 multiletter control sequences out of 15000+600000
+ 22241 strings out of 411164
+ 405808 string characters out of 5814263
+ 1858394 words of memory out of 5000000
+ 42445 multiletter control sequences out of 15000+600000
  520641 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,13n,107p,602b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW2.xdv (13 pages, 54624 bytes).
+Output written on 111652004_CM_HW2.xdv (13 pages, 76276 bytes).

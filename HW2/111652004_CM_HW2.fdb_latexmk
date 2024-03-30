@@ -1,13 +1,13 @@
 # Fdb version 4
-["xdvipdfmx"] 1711117325 "111652004_CM_HW2.xdv" "111652004_CM_HW2.pdf" "111652004_CM_HW2" 1711117326 0
-  "111652004_CM_HW2.xdv" 1711117325 54624 3e4ff902a708973ef81a649c0b4b6123 "xelatex"
+["xdvipdfmx"] 1711781083 "111652004_CM_HW2.xdv" "111652004_CM_HW2.pdf" "111652004_CM_HW2" 1711781083 0
+  "111652004_CM_HW2.xdv" 1711781082 76276 5d3925353778d6b19e63c5f63d2a0ec2 "xelatex"
   (generated)
   "111652004_CM_HW2.pdf"
   (rewritten before read)
-["xelatex"] 1711117324 "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" "111652004_CM_HW2.xdv" "111652004_CM_HW2" 1711117326 0
-  "111652004_CM_HW2.aux" 1711117325 1072 0c648350ca7a379ec23bee5f8d82364d "xelatex"
-  "111652004_CM_HW2.out" 1711117325 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW2.tex" 1711117324 10830 7d11b9379559fd870e63c808613c305a ""
+["xelatex"] 1711781081 "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" "111652004_CM_HW2.xdv" "111652004_CM_HW2" 1711781083 0
+  "111652004_CM_HW2.aux" 1711781082 1072 0c648350ca7a379ec23bee5f8d82364d "xelatex"
+  "111652004_CM_HW2.out" 1711781082 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW2.tex" 1711781081 15063 a89e527b0814b6d7cf2b6c8033040d1e ""
   "C:/Users/yungh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1688385619 36484932 d804c504e3d64c1e236529bf483411b3 ""
   "D:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -160,7 +160,7 @@
   "D:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "D:/Program Files/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "D:/Program Files/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" 1711117324 10830 7d11b9379559fd870e63c808613c305a ""
+  "e:/Eiken/Visual Studio Code Git Sync/CM_HW/HW2/111652004_CM_HW2.tex" 1711781081 15063 a89e527b0814b6d7cf2b6c8033040d1e ""
   "problem_2_py.png" 1711115178 60100 25121f2baab16665ed001195bbb92cb9 ""
   "problem_4_py.png" 1711117238 46490 73c11b8032842363c84a379b434f442e ""
   (generated)
