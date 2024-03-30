@@ -113,7 +113,13 @@
 \begin{problem}\label{problem 1}
     Use a fixed-point iteration method to determine a solution accurate to within $10^{-2}$ for $x^3-x-1=0$ on $[1, 2]$. Use $p_0=1$.
 \end{problem}
-\textbf{Solution}. We want to find the solution to $f(x)=x$ with $f(x)=\sqrt{1+\dfrac{1}{x}}$. Then, by calculator,
+\textbf{Solution}. By Algebra, we have
+\begin{align*}
+    x^3-x-1&=0\\
+    x^2&=1+\dfrac{1}{x}\\
+    x&=\sqrt{1+\dfrac{1}{x}}
+\end{align*}
+for $x>0$. We want to find the solution to $f(x)=x$ with $f(x)=\sqrt{1+\dfrac{1}{x}}$. Then, by calculator,
 \begin{align*}
     p_1&=\sqrt{2}=1.414,\\
     p_2&=1.307,\\
@@ -244,6 +250,47 @@ for all $k\in\mathbb{N}$, which implies that $\{x_n\}$ is decreasing. Since $\{x
     \end{enumerate}
 \end{problem}
 \textbf{Solution}.
+\begin{enumerate}
+    \item By the algorithm of the secant method, we have the formula
+    \begin{equation*}
+        p_n=p_{n-1}-f(p_{n-1})\cdot\dfrac{p_{n-1}-p_{n-2}}{f(p_{n-1})-f(p_{n-2})}.
+    \end{equation*}
+    By Python, we have
+    \begin{equation*}
+        p_2=-0.685,
+    \end{equation*}
+    and
+    \begin{equation*}
+        p_3=-1.252.
+    \end{equation*}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{problem_7a_py.png}
+    \end{center}
+    \item We first check that $f(-1)$ and $f(0)$ has different sign. By calculator,
+    \begin{equation*}
+        f(-1)\approx0.45
+    \end{equation*}
+    and
+    \begin{equation*}
+        f(-1)=-1.
+    \end{equation*}
+    By the algorithm of the false position, we have the formula
+    \begin{equation*}
+        p_n=p_{n-1}-f(p_{n-1})\cdot\dfrac{p_{n-1}-p_{n-2}}{f(p_{n-1})-f(p_{n-2})}.
+    \end{equation*}
+    With a test to ensure that the root is always bracketed between successive iterations, by Python, we have
+    \begin{equation*}
+        p_2=-0.685,
+    \end{equation*}
+    and
+    \begin{equation*}
+        p_3=-0.841.
+    \end{equation*}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{problem_7b_py.png}
+    \end{center}
+    \qed
+\end{enumerate}
 
 
 \newpage
