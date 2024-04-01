@@ -15,5 +15,3 @@ for i in range(2):
         q[0] = q[1]
     p[1] = p_i
     q[1] = q_i
-
-
