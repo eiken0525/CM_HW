@@ -176,7 +176,7 @@ The case with $h=0.01$ is closed to the true value, and the other is farther to 
     $$N_1(h)=1.570796, \quad N_1\left(\dfrac{h}{2}\right)=1.896119, \quad N_1\left(\dfrac{h}{4}\right)=1.974232, \quad N_1\left(\dfrac{h}{8}\right)=1.993570.$$
     Assuming $M=N_1(h)+K_1h^2+K_2h^4+K_3h^6+K_4h^8+\mathcal{O}(h^{10})$, construct an extrapolation table to determine $N_4(h)$.
 \end{problem}
-\textbf{Solution}. By the formula for the $\mathcal{O}(h^{2j})$ approximation $$N_j(h)=N_{j-1}\left(\dfrac{h}{2}\right)+\dfrac{N_{j-1}\left(\dfrac{h}{2}\right)-N_{j-1}(h)}{4^{j-1}-1},$$ we can have the following table:
+\textbf{Solution}. By the formula for the $\mathcal{O}(h^{2j})$ approximation $$N_j(h)=N_{j-1}\left(\dfrac{h}{2}\right)+\dfrac{N_{j-1}\left(\dfrac{h}{2}\right)-N_{j-1}(h)}{4^{j-1}-1}$$ and calculator, we can have the following table:
 \begin{center}
     \begin{tabular}{c|c|c|c}
         $\mathcal{O}(h^2)$ & $\mathcal{O}(h^4)$ & $\mathcal{O}(h^6)$ & $\mathcal{O}(h^8)$\\
@@ -187,7 +187,7 @@ The case with $h=0.01$ is closed to the true value, and the other is farther to 
         \hline
         $1.974232$ & $2.000270$ & $1.999984$ & \\
         \hline
-        $1.993570$ & $2.000016$ & $1.999837$ & $1.999834$
+        $1.993570$ & $2.000016$ & $1.999991$ & $1.999999$
     \end{tabular}
 \end{center}
 \qed
@@ -221,14 +221,36 @@ Choose $x_0<x_1$. Then $(x_0, x_1, c_1)=\left(\dfrac{3-\sqrt{3}}{6}, \dfrac{3+\s
 
 \newpage
 \begin{problem}\label{problem 8} % 4.4 E11
-    Determine the values of n and h required to approximate $$\int_{0}^{2}e^{2x}\sin 3x\ddi x$$ to within $10^{-4}$ . Use
+    Determine the values of $n$ and $h$ required to approximate $$\int_{0}^{2}e^{2x}\sin 3x\ddi x$$ to within $10^{-4}$ . Use
     \begin{enumerate}
         \item the composite trapezoidal rule;
         \item composite Simpson's rule; and
         \item the composite midpoint rule.
     \end{enumerate}
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. The real value of the integral is \begin{align*}
+    \int_{0}^{2}e^{2x}\sin 3x\ddi x&=\left[\dfrac{1}{13}e^{2x}(2\sin 3x-3\cos3x)\right]_0^2\\
+    &=-14.21397712986
+\end{align*}
+\begin{enumerate}
+    \item It is clear that $f\in C^2[0, 2]$. Choose $n=20000$. Then $h=0.0001$. Using the composite trapezoidal rule, \begin{align*}
+        \int_0^2 e^{2x}\sin 3x\ddi x&\approx\dfrac{0.0001}{2}\left[0+2\cdot\sum_{j=1}^{19999}e^{2x_j}\sin(3x_j)+e^{4}\sin(6)\right]\\
+        &=-14.213977026729639,
+    \end{align*} where $x_j=0.0001\cdot j$.
+    \item It is clear that $f\in C^4[0,2]$. Choose $n=20000$. Then $h=0.0001$. Using composite Simpson's rule, \begin{align*}
+        \int_0^2 e^{2x}\sin 3x\ddi x&\approx\dfrac{0.0001}{3}\left[0+2\cdot\sum_{j=1}^{9999}e^{2x_{2j}}\sin(3x_{2j})+4\cdot\sum_{j=1}^{10000}e^{2x_{2j-1}}\sin(3x_{2j-1})+e^{2}\sin(6)\right]\\
+        &=--14.213977129862458,
+    \end{align*} where $x_j=0.0001\cdot j$.
+    \item It is clear that $f\in C^2[0,2]$. Choose $n=19998$. Then $h=0.0001$. Using the composite midpoint rule, \begin{align*}
+        \int_0^2 e^{2x}\sin 3x\ddi x&\approx2\cdot0.0001\cdot\sum_{j=0}^{9999}f(x_{2j})\\
+        &=-14.213977336128231,
+    \end{align*} where $x_j=0.0001\cdot(j+1)$.
+\end{enumerate}
+It can be seen that all of the three methods are accurate within $10^{-4}$ (even more precise). \qed
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{P8.png}
+\end{center}
 
 
 \newpage
@@ -241,15 +263,15 @@ Choose $x_0<x_1$. Then $(x_0, x_1, c_1)=\left(\dfrac{3-\sqrt{3}}{6}, \dfrac{3+\s
     &<3.5\times10^{-9}.
 \end{align*} By Python and composite Simpson's rule, \begin{align*}
     2\cdot\int_{0}^{\pi}\sqrt{\left(-3\sin\theta\right)^2+\left(2\cos\theta\right)^2}\ddi\theta&\approx2\cdot\dfrac{\pi}{1000}\cdot\dfrac{1}{3}\left[f(0)+2\cdot\sum_{j=1}^{499}f(x_{2j})+4\cdot\sum_{j=1}^{500}f(x_{2j-1})+f(\pi)\right]\\
-    &=15.8654393826.
-\end{align*} The true value is around $8E\left(-\dfrac{5}{4}\right)=15.8654395893$; thus the absolute error is \begin{align*}
+    &=15.8654393826,
+\end{align*} where $x_i=a+hi$. The true value is around $8E\left(-\dfrac{5}{4}\right)=15.8654395893$; thus the absolute error is \begin{align*}
     \left|15.8654393826-15.8654395893\right|&=0.0000002067\\
     &<3\times10^{-7}\\
     &<10^{-6}.
 \end{align*} \qed
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P9.jpg}
+    \includegraphics[width=0.8\textwidth]{P9.jpg}
 \end{center}
 
 
@@ -325,7 +347,7 @@ Choose $x_0<x_1$. Then $(x_0, x_1, c_1)=\left(\dfrac{3-\sqrt{3}}{6}, \dfrac{3+\s
 \end{align*} The relative errors are $0.0044228$, $0.00022582$, and $0.000012200$, in the order of $n=2$, $n=3$, and $n=4$. The process of calculation is done by Python. \qed
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P14.jpg}
+    \includegraphics[width=0.8\textwidth]{P14.jpg}
 \end{center}
 
 
