@@ -235,7 +235,22 @@ Choose $x_0<x_1$. Then $(x_0, x_1, c_1)=\left(\dfrac{3-\sqrt{3}}{6}, \dfrac{3+\s
 \begin{problem}\label{problem 9} % 4.4 E21
     Determine to within $10^{-6}$ the length of the graph of the ellipse with $4x^2+9y^2=36$.
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. We use composite Simpson's rule to answer. The desired integral is $$2\cdot\int_{0}^{\pi}\sqrt{\left(-3\sin\theta\right)^2+\left(2\cos\theta\right)^2}\ddi\theta.$$ The function $f(x)$ can be re-written as $\displaystyle\sqrt{4+5(\sin\theta)^2}$. Choose $n=1000$, so that the error term \begin{align*}
+    \dfrac{\pi-0}{180}\cdot\left(\dfrac{\pi-0}{1000}\right)^4\cdot f^{(4)}(\mu)&\leq\dfrac{\pi-0}{180}\cdot\left(\dfrac{\pi-0}{1000}\right)^4\cdot \sup_{x\in\mathbb{R}}\left|f^{(4)}(x)\right|\\
+    &<\dfrac{\pi}{180}\cdot0.01^4\cdot20\\
+    &<3.5\times10^{-9}.
+\end{align*} By Python and composite Simpson's rule, \begin{align*}
+    2\cdot\int_{0}^{\pi}\sqrt{\left(-3\sin\theta\right)^2+\left(2\cos\theta\right)^2}\ddi\theta&\approx2\cdot\dfrac{\pi}{1000}\cdot\dfrac{1}{3}\left[f(0)+2\cdot\sum_{j=1}^{499}f(x_{2j})+4\cdot\sum_{j=1}^{500}f(x_{2j-1})+f(\pi)\right]\\
+    &=15.8654393826.
+\end{align*} The true value is around $8E\left(-\dfrac{5}{4}\right)=15.8654395893$; thus the absolute error is \begin{align*}
+    \left|15.8654393826-15.8654395893\right|&=0.0000002067\\
+    &<3\times10^{-7}\\
+    &<10^{-6}.
+\end{align*} \qed
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{P9.jpg}
+\end{center}
 
 
 \newpage
@@ -256,7 +271,17 @@ Choose $x_0<x_1$. Then $(x_0, x_1, c_1)=\left(\dfrac{3-\sqrt{3}}{6}, \dfrac{3+\s
         \end{tabular}
     \end{center}
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. We use the Romberg extrapolation for higher accuracy. \begin{align*}
+    R_{1,1}&=4\cdot\left(2.4142+3.2804\right)=22.7784;\\
+    R_{2,1}&=2\cdot\left(2.4142+2.8974+3.2804\right)=17.184;\\
+    R_{3,1}&=1\cdot\left(2.4142+2.6734+2.8974+3.0976+3.2804\right)=14.363;\\
+    R_{2,2}&=R_{2,1}+\dfrac{1}{4^1-1}\left(R_{2,1}-R_{1,1}\right)\\
+    &=15.3192;\\
+    R_{3,2}&=R_{3,1}+\dfrac{1}{4^1-1}\left(R_{3,1}-R_{2,1}\right)\\
+    &=13.4227;\\
+    R_{3,3}&=R_{3,2}+\dfrac{1}{4^2-1}\left(R_{3,2}-R_{2,2}\right)\\
+    &=13.2963.
+\end{align*} \qed
 
 
 \newpage
@@ -284,16 +309,24 @@ Choose $x_0<x_1$. Then $(x_0, x_1, c_1)=\left(\dfrac{3-\sqrt{3}}{6}, \dfrac{3+\s
 \begin{problem}\label{problem 14} % 4.7 E1
     Approximate the following integral using Gaussian quadrature with $n=2, 3, 4$. Compare your answers with the exact values of the integral. $$\int_{1}^{1.6}\dfrac{2x}{x^2-4}\ddi x.$$
 \end{problem}
-\textbf{Solution}. We first transform the interval $[1, 1.6]$ to $[-1, 1]$ by using $t=\dfrac{2x-2.6}{0.6}$. Hence the integral becomes $$\int_{-1}^{1}\dfrac{1.2t+5.2}{\left(\frac{0.6t+2.6}{2}\right)^2-4}\cdot\dfrac{0.6}{2}\ddi t=\int_{-1}^{1}\dfrac{12t+52}{3t^2+26t-77}\ddi t.$$ We now deal with the case $n=2$. Using Table 4.12, the approximation is \begin{align*}
-    &\quad\ 1\cdot\dfrac{12\cdot 0.5773502692+52}{(0.5773502692)^2+26\cdot0.5773502692-77}+1\cdot\dfrac{12\cdot (-0.5773502692)+52}{(-0.5773502692)^2+26\cdot(-0.5773502692)-77}\\
-    &=-1.4474.
-\end{align*}
-
-The exact value of the integral is \begin{align*}
+\textbf{Solution}. We first transform the interval $[1, 1.6]$ to $[-1, 1]$ by using $t=\dfrac{2x-2.6}{0.6}$. Hence the integral becomes $$\int_{-1}^{1}\dfrac{0.6t+2.6}{\left(\frac{0.6t+2.6}{2}\right)^2-4}\cdot\dfrac{0.6}{2}\ddi t=\int_{-1}^{1}\dfrac{6t+26}{3t^2+26t-77}\ddi t.$$ We now deal with the case $n=2$. Using Table 4.12, the approximation is \begin{align*}
+    &\quad\ 1\cdot\dfrac{12\cdot 0.57735+26}{(0.57735)^2+26\cdot0.57735-77}+1\cdot\dfrac{12\cdot (-0.57735)+26}{(-0.57735)^2+26\cdot(-0.57735)-77}\\
+    &=-0.73072.
+\end{align*} We now deal with the case $n=3$. Using Table 4.12, the approximation is \begin{align*}
+    &\quad\ 0.55556\cdot\dfrac{12\cdot 0.77460+26}{(0.77460)^2+26\cdot0.77460-77}\\&\quad+0.88889\cdot\dfrac{12\cdot 0+26}{(0)^2+26\cdot0-77}\\&\quad+0.55556\cdot\dfrac{12\cdot (-0.77460)+26}{(-0.77460)^2+26\cdot(-0.77460)-77}\\
+    &=-0.73370.
+\end{align*} We now deal with the case $n=4$. Using Table 4.12, the approximation is \begin{align*}
+    &\quad\ 0.34785\cdot\dfrac{12\cdot 0.86114+26}{(0.86114)^2+26\cdot0.86114-77}\\&\quad+0.65215\cdot\dfrac{12\cdot 0.33998+26}{(0.33998)^2+26\cdot0.33998-77}\\&\quad+0.65215\cdot\dfrac{12\cdot (-0.33998)+26}{(-0.33998)^2+26\cdot(-0.33998)-77}\\&\quad+0.34785\cdot\dfrac{12\cdot (-0.86114)+26}{(-0.86114)^2+26\cdot(-0.86114)-77}\\
+    &=-0.73396.
+\end{align*} The exact value of the integral is \begin{align*}
     \int_{1}^{1.6}\dfrac{2x}{x^2-4}\ddi x&=\int_{-3}^{-1.44}\dfrac{1}{u}\ddi u\\
-    &=0.364643-1.098612\\
-    &=-0.733969.
-\end{align*}
+    &=\ln(0.48)\\
+    &=-0.73397.
+\end{align*} The relative errors are $0.0044228$, $0.00022582$, and $0.000012200$, in the order of $n=2$, $n=3$, and $n=4$. The process of calculation is done by Python. \qed
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{P14.jpg}
+\end{center}
 
 
 \newpage

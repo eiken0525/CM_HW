@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  29 APR 2024 13:35
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  29 APR 2024 18:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -789,52 +789,57 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 235.
 Package mdframed Info: Not enough space on this page on input line 237.
- [9]
+File: P9.jpg Graphic file (type bmp)
+<P9.jpg>
+ [9] [10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 242.
-Package mdframed Info: Not enough space on this page on input line 244.
- [10]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 249.
-Package mdframed Info: Not enough space on this page on input line 258.
+(mdframed)              on input line 257.
+Package mdframed Info: Not enough space on this page on input line 259.
  [11]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 263.
-Package mdframed Info: Not enough space on this page on input line 265.
+(mdframed)              on input line 264.
+Package mdframed Info: Not enough space on this page on input line 273.
  [12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 270.
-Package mdframed Info: Not enough space on this page on input line 279.
+(mdframed)              on input line 288.
+Package mdframed Info: Not enough space on this page on input line 290.
  [13]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 284.
-Package mdframed Info: Not enough space on this page on input line 286.
+(mdframed)              on input line 295.
+Package mdframed Info: Not enough space on this page on input line 304.
  [14]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 300.
-Package mdframed Info: Not enough space on this page on input line 302.
+(mdframed)              on input line 309.
+Package mdframed Info: Not enough space on this page on input line 311.
  [15]
+File: P14.jpg Graphic file (type bmp)
+<P14.jpg>
+ [16]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
-Package mdframed Info: Not enough space on this page on input line 316.
- [16] (./111652004_CM_HW4.aux)
+(mdframed)              on input line 333.
+Package mdframed Info: Not enough space on this page on input line 335.
+ [17]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 340.
+Package mdframed Info: Not enough space on this page on input line 349.
+ [18] (./111652004_CM_HW4.aux)
 Package rerunfilecheck Info: File `111652004_CM_HW4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22408 strings out of 476683
- 423978 string characters out of 5804047
+ 22426 strings out of 476683
+ 424159 string characters out of 5804047
  1856018 words of memory out of 5000000
- 42276 multiletter control sequences out of 15000+600000
+ 42290 multiletter control sequences out of 15000+600000
  519533 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,104p,966b,533s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW4.xdv (17 pages, 67328 bytes).
+Output written on 111652004_CM_HW4.xdv (19 pages, 77868 bytes).

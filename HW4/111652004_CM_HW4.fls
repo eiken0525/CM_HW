@@ -976,6 +976,12 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./P9.jpg
+INPUT ./P9.jpg
+INPUT P9.jpg
+INPUT ./P14.jpg
+INPUT ./P14.jpg
+INPUT P14.jpg
 INPUT 111652004_CM_HW4.aux
 INPUT ./111652004_CM_HW4.out
 INPUT ./111652004_CM_HW4.out

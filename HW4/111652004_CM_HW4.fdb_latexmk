@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1714368916 "111652004_CM_HW4.xdv" "111652004_CM_HW4.pdf" "111652004_CM_HW4" 1714368916 0
-  "111652004_CM_HW4.xdv" 1714368916 67328 16988cc59e501e689f3e76fbb3d3a1b4 "xelatex"
+["xdvipdfmx"] 1714386371 "111652004_CM_HW4.xdv" "111652004_CM_HW4.pdf" "111652004_CM_HW4" 1714386372 0
+  "111652004_CM_HW4.xdv" 1714386371 77868 d1d4cb51cc0b1bb1c9614750fa3d40f4 "xelatex"
   (generated)
   "111652004_CM_HW4.pdf"
   (rewritten before read)
-["xelatex"] 1714368915 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW4/111652004_CM_HW4.tex" "111652004_CM_HW4.xdv" "111652004_CM_HW4" 1714368916 0
-  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW4/111652004_CM_HW4.tex" 1714368915 14657 66e3af56984cbc95cb20b1b51c669674 ""
+["xelatex"] 1714386371 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW4/111652004_CM_HW4.tex" "111652004_CM_HW4.xdv" "111652004_CM_HW4" 1714386372 0
+  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW4/111652004_CM_HW4.tex" 1714386371 17396 3bb19361579cc89c7cb7d0b59e63f4cc ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -161,9 +161,11 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1708868527 10502812 d9bc4cbf3c65ef7eed6035287310d941 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "111652004_CM_HW4.aux" 1714368916 1311 33e546e39816ae2f879176eab48128ee "xelatex"
-  "111652004_CM_HW4.out" 1714368916 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW4.tex" 1714368915 14657 66e3af56984cbc95cb20b1b51c669674 ""
+  "111652004_CM_HW4.aux" 1714386371 1311 f8e5e858dcce6af75103055417f10bff "xelatex"
+  "111652004_CM_HW4.out" 1714386371 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW4.tex" 1714386371 17396 3bb19361579cc89c7cb7d0b59e63f4cc ""
+  "P14.jpg" 1714381631 307956 15d424701933ab2ee45003f0d71a37e9 ""
+  "P9.jpg" 1714386159 212122 30bf946e48e718f3dc722172884ef002 ""
   (generated)
   "111652004_CM_HW4.aux"
   "111652004_CM_HW4.log"
