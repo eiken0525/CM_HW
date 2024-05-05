@@ -167,8 +167,36 @@ The case with $h=0.01$ is closed to the true value, and the other is farther to 
 \begin{problem}\label{problem 3} % 4.1 E22
     Derive an $\mathcal{O}(h^4)$ five-point formula to approximate $f'(x_0)$ that uses $f(x_0-h)$, $f(x_0)$, $f(x_0+h)$, $f(x_0+2h)$, and $f(x_0+3h)$. [Hint: Consider the expression $A\cdot f(x_0-h)+B\cdot f(x_0+h)+C\cdot f(x_0+2h) + D\cdot f(x_0+3h)$. Expand in fourth Taylor polynomials, and choose $A$, $B$, $C$, and $D$, appropriately.]
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. We follow the hint and expand them in fourth Taylor polynomials, obtaining
+\begin{align*}
+    f(x_0-h)&=f(x_0)-\phantom{1}f'(x_0)h+\dfrac{1}{2}f''(x_0)h^2-\dfrac{1}{6}f'''(x_0)h^3+\dfrac{1}{24}f^{(4)}(\xi_1)h^4\\
+    f(x_0+h)&=f(x_0)+\phantom{1}f'(x_0)h+\dfrac{1}{2}f''(x_0)h^2+\dfrac{1}{6}f'''(x_0)h^3+\dfrac{1}{24}f^{(4)}(\xi_2)h^4\\
+    f(x_0+2h)&=f(x_0)+2f'(x_0)h+\,\,\!2f''(x_0)h^2+\dfrac{4}{3}f'''(x_0)h^3+\ \dfrac{2}{3}\ f^{(4)}(\xi_2)h^4\\
+    f(x_0+3h)&=f(x_0)+3f'(x_0)h+\dfrac{9}{2}f''(x_0)h^2+\dfrac{9}{2}f'''(x_0)h^3+\dfrac{27}{8}f^{(4)}(\xi_2)h^4.
+\end{align*}
+Then, we have \renewcommand{\arraystretch}{1}
 
+\vspace{-1em}
+\begin{equation*}
+    \begin{bmatrix}
+        1 & 1 & 1 & 1 \\
+        -1 & 1 & 2 & 3 \\
+        \dfrac{1}{2} & \dfrac{1}{2} & 2 & \dfrac{9}{2} \\
+        \dfrac{1}{24} & \dfrac{1}{24} & \dfrac{2}{3} & \dfrac{27}{8}
+    \end{bmatrix}\begin{bmatrix}
+        A \\ B \\ C \\ D
+    \end{bmatrix}=\begin{bmatrix}
+        -1 \\ 1 \\ 0 \\ 0
+    \end{bmatrix},
+\end{equation*} \renewcommand{\arraystretch}{0.75}
+\vspace{0.2em}
+
+\noindent which implies $\left(A, B, C, D\right)=\left(-\dfrac{17}{24}, -\dfrac{5}{4}, \dfrac{4}{3}, -\dfrac{3}{8}\right)$. Hence, 
+\begin{align*}
+    f'(x_0)h&=-\dfrac{17}{24}f(x_0-h)+f(x_0)-\dfrac{5}{4}f(x_0+h)+\dfrac{4}{3}f(x_0+2h)-\dfrac{3}{8}f(x_0+3h)\\
+    f'(x_0)&=\dfrac{1}{h}\cdot\left(-\dfrac{17}{24}f(x_0-h)+f(x_0)-\dfrac{5}{4}f(x_0+h)+\dfrac{4}{3}f(x_0+2h)-\dfrac{3}{8}f(x_0+3h)\right).
+\end{align*}
+\qed
 
 \newpage
 \begin{problem}\label{problem 4} % 4.2 E5
@@ -279,7 +307,11 @@ It can be seen that all of the three methods are accurate within $10^{-4}$ (even
 \begin{problem}\label{problem 10} % 4.4 E16
     Show that the error $E(f)$ for composite Simpson's rule can be approximated by $$-\dfrac{h^4}{180}\left(f'''(b)-f'''(a)\right).$$ [Hint: $\displaystyle\sum_{j=1}^{n/2}f^{(4)}(\xi_j)(2h)$ is a Riemann sum for $\displaystyle\int_{a}^{b}f^{(4)}(x)\ddi x$.]
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. By textbook, the error for composite Simpson's rule is $$-\dfrac{h^5}{90}\sum_{j=1}^{n/2}f^{(4)}(\xi_j)=-\dfrac{h^4}{180}\sum_{j=1}^{n/2}f^{(4)}(\xi_j)(2h)$$ for $\xi_j\in(x_{2j-2}, x_{2j})$. By hint, we have \begin{align*}
+    -\dfrac{h^4}{180}\sum_{j=1}^{n/2}f^{(4)}(\xi_j)(2h)&=-\dfrac{h^4}{180}\int_{a}^{b}f^{(4)}(x)\ddi x\\
+    &=-\dfrac{h^4}{180}\left(f'''(b)-f'''(a)\right)
+\end{align*}
+by the fundamental theorem of calculus, as desired. \qed
 
 
 \newpage
