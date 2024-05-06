@@ -121,13 +121,12 @@
     \end{center}
 \end{problem}
 \textbf{Solution}. By the five-point midpoint formula, \begin{align*}
-    f'(3)&=\dfrac{1}{12\cdot 1}\left(f(1)-8\cdot f(2)+8\cdot f(4)-f(5)\right)+\dfrac{h^4}{30}\cdot f^{(5)}(\xi)\\
-    &=\dfrac{1}{12}\left(2.4142-8\cdot 2.6734+8\cdot 4.0976-3.2804\right)+\dfrac{(0.1)^4}{30}\cdot f^{(5)}(\xi)\\
-    &=0.8773+\dfrac{(0.1)^4}{30}\cdot f^{(5)}(\xi),
+    f'(3)&=\dfrac{1}{12\cdot 1}\left(f(1)-8\cdot f(2)+8\cdot f(4)-f(5)\right)+\dfrac{1^4}{30}\cdot f^{(5)}(\xi)\\
+    &=\dfrac{1}{12}\left(2.4142-8\cdot 2.6734+8\cdot 3.0976-3.2804\right)+\dfrac{1}{30}\cdot f^{(5)}(\xi)\\
+    &=0.2106+\dfrac{1}{30}\cdot f^{(5)}(\xi),
 \end{align*}
 where $\xi\in(1, 5)$. The bound for the error is \begin{align*}
-    \left|\dfrac{(0.1)^4}{30}\cdot f^{(5)}(\xi)\right|&\leq\dfrac{(0.1)^4}{30}\cdot 23\\
-    &=7.667\cdot 10^{-5}.
+    \left|\dfrac{1}{30}\cdot f^{(5)}(\xi)\right|&\leq\dfrac{23}{30}.
 \end{align*} \qed
 
 
@@ -346,15 +345,15 @@ by the fundamental theorem of calculus, as desired. \qed
     \end{center}
 \end{problem}
 \textbf{Solution}. We use the Romberg extrapolation for higher accuracy. \begin{align*}
-    R_{1,1}&=4\cdot\left(2.4142+3.2804\right)=22.7784;\\
-    R_{2,1}&=2\cdot\left(2.4142+2.8974+3.2804\right)=17.184;\\
-    R_{3,1}&=1\cdot\left(2.4142+2.6734+2.8974+3.0976+3.2804\right)=14.363;\\
+    R_{1,1}&=4\cdot\left(2.4142+3.2804\right)/2=11.3892;\\
+    R_{2,1}&=2\cdot\left(2.4142+2\cdot2.8974+3.2804\right)/2=11.4894;\\
+    R_{3,1}&=1\cdot\left(2.4142+2.6734+2.8974+3.0976+3.2804\right)=11.5157;\\
     R_{2,2}&=R_{2,1}+\dfrac{1}{4^1-1}\left(R_{2,1}-R_{1,1}\right)\\
-    &=15.3192;\\
+    &=11.5228;\\
     R_{3,2}&=R_{3,1}+\dfrac{1}{4^1-1}\left(R_{3,1}-R_{2,1}\right)\\
-    &=13.4227;\\
+    &=11.5245;\\
     R_{3,3}&=R_{3,2}+\dfrac{1}{4^2-1}\left(R_{3,2}-R_{2,2}\right)\\
-    &=13.2963.
+    &=11.5246.
 \end{align*} \qed
 
 
@@ -399,7 +398,7 @@ which is the same as the one given by composite Simpson's rule. \qed
     &=-0.73072.
 \end{align*} We now deal with the case $n=3$. Using Table 4.12, the approximation is \begin{align*}
     &\quad\ 0.55556\cdot\dfrac{12\cdot 0.77460+26}{(0.77460)^2+26\cdot0.77460-77}\\&\quad+0.88889\cdot\dfrac{12\cdot 0+26}{(0)^2+26\cdot0-77}\\&\quad+0.55556\cdot\dfrac{12\cdot (-0.77460)+26}{(-0.77460)^2+26\cdot(-0.77460)-77}\\
-    &=-0.73370.
+    &=-0.73380.
 \end{align*} We now deal with the case $n=4$. Using Table 4.12, the approximation is \begin{align*}
     &\quad\ 0.34785\cdot\dfrac{12\cdot 0.86114+26}{(0.86114)^2+26\cdot0.86114-77}\\&\quad+0.65215\cdot\dfrac{12\cdot 0.33998+26}{(0.33998)^2+26\cdot0.33998-77}\\&\quad+0.65215\cdot\dfrac{12\cdot (-0.33998)+26}{(-0.33998)^2+26\cdot(-0.33998)-77}\\&\quad+0.34785\cdot\dfrac{12\cdot (-0.86114)+26}{(-0.86114)^2+26\cdot(-0.86114)-77}\\
     &=-0.73396.
