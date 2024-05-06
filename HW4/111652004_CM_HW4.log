@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  7 MAY 2024 00:05
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  7 MAY 2024 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -807,33 +807,33 @@ Package mdframed Info: Not enough space on this page on input line 346.
  [13]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 361.
-Package mdframed Info: Not enough space on this page on input line 363.
+(mdframed)              on input line 362.
+Package mdframed Info: Not enough space on this page on input line 364.
  [14]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 376.
-Package mdframed Info: Not enough space on this page on input line 385.
+(mdframed)              on input line 377.
+Package mdframed Info: Not enough space on this page on input line 386.
 File: P13.jpg Graphic file (type bmp)
 <P13.jpg>
  [15] [16]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 393.
-Package mdframed Info: Not enough space on this page on input line 395.
+(mdframed)              on input line 394.
+Package mdframed Info: Not enough space on this page on input line 396.
  [17]
 File: P14.jpg Graphic file (type bmp)
 <P14.jpg>
  [18]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 417.
-Package mdframed Info: Not enough space on this page on input line 419.
+(mdframed)              on input line 418.
+Package mdframed Info: Not enough space on this page on input line 420.
  [19]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 424.
-Package mdframed Info: Not enough space on this page on input line 433.
+(mdframed)              on input line 425.
+Package mdframed Info: Not enough space on this page on input line 434.
 File: P16.jpg Graphic file (type bmp)
 <P16.jpg>
  [20] [21] (./111652004_CM_HW4.aux)
@@ -849,4 +849,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  99i,13n,104p,966b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW4.xdv (22 pages, 108476 bytes).
+Output written on 111652004_CM_HW4.xdv (22 pages, 108716 bytes).
