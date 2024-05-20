@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1716195665 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716195665 0
-  "111652004_CM_HW5.xdv" 1716195665 19208 9c708b6e6d6350a86aaf31b2cf350615 "xelatex"
+["xdvipdfmx"] 1716221383 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716221383 0
+  "111652004_CM_HW5.xdv" 1716221383 88940 f2b6c6a1ab5800399c7b7d2658880c8f "xelatex"
   (generated)
   "111652004_CM_HW5.pdf"
   (rewritten before read)
-["xelatex"] 1716195664 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716195665 0
-  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716195664 4801 0a624277f520cfdcbda32bec702e4a0a ""
+["xelatex"] 1716221382 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716221383 0
+  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716221382 16386 5d660b35794ccd5ab366e68fecc00848 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -15,9 +15,11 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
@@ -157,9 +159,9 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1708868527 10502812 d9bc4cbf3c65ef7eed6035287310d941 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "111652004_CM_HW5.aux" 1716195665 1311 33e546e39816ae2f879176eab48128ee "xelatex"
-  "111652004_CM_HW5.out" 1716195665 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW5.tex" 1716195664 4801 0a624277f520cfdcbda32bec702e4a0a ""
+  "111652004_CM_HW5.aux" 1716221383 1455 48d81a91d0ee758a3e7e05ab48c566c8 "xelatex"
+  "111652004_CM_HW5.out" 1716221383 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW5.tex" 1716221382 16386 5d660b35794ccd5ab366e68fecc00848 ""
   (generated)
   "111652004_CM_HW5.aux"
   "111652004_CM_HW5.log"
