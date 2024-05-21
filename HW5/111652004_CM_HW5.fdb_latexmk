@@ -1,18 +1,20 @@
 # Fdb version 4
-["xdvipdfmx"] 1716221383 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716221383 0
-  "111652004_CM_HW5.xdv" 1716221383 88940 f2b6c6a1ab5800399c7b7d2658880c8f "xelatex"
+["xdvipdfmx"] 1716308813 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716308814 0
+  "111652004_CM_HW5.xdv" 1716308813 103356 ea1775d2a376d92401fd35beef753cf0 "xelatex"
   (generated)
   "111652004_CM_HW5.pdf"
   (rewritten before read)
-["xelatex"] 1716221382 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716221383 0
-  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716221382 16386 5d660b35794ccd5ab366e68fecc00848 ""
+["xelatex"] 1716308813 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716308814 0
+  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716308812 19091 f393ba9585c75254ee603f110bf38140 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -159,9 +161,18 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1708868527 10502812 d9bc4cbf3c65ef7eed6035287310d941 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "111652004_CM_HW5.aux" 1716221383 1455 48d81a91d0ee758a3e7e05ab48c566c8 "xelatex"
-  "111652004_CM_HW5.out" 1716221383 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW5.tex" 1716221382 16386 5d660b35794ccd5ab366e68fecc00848 ""
+  "111652004_CM_HW5.aux" 1716308813 1457 e89e0a148604e70077cb51b58e45a176 "xelatex"
+  "111652004_CM_HW5.out" 1716308813 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW5.tex" 1716308812 19091 f393ba9585c75254ee603f110bf38140 ""
+  "P3a.png" 1716308626 25031 73d61836e972dce3711aab2c72daa21c ""
+  "P3ae.png" 1716308626 32480 eb93c3fca23ad8fc5b00e40c14e8e3bd ""
+  "P3b.png" 1716308626 25766 974678ea4e027784ae6cd4de2cc8e9b5 ""
+  "P3be.png" 1716308626 31187 b39207acd68be26e72ad755b6ee30d66 ""
+  "P4a.jpg" 1716276805 203334 495382aa93f9a6a45eefa327ddbccb77 ""
+  "P7a.png" 1716308614 25941 cef1b797d3d8758ce3e5788d2d6ea77f ""
+  "P7ae.png" 1716308614 32949 fc996b52de32af0555961060c3e2a3bd ""
+  "P7b.png" 1716308614 28117 7a6da70f7c0ec28f42d8ebc28cbe51e0 ""
+  "P7be.png" 1716308614 34443 8be3f4dea25e6eea3aa8599725286e10 ""
   (generated)
   "111652004_CM_HW5.aux"
   "111652004_CM_HW5.log"

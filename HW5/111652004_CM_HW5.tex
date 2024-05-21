@@ -165,9 +165,32 @@
         \item $y'=\dfrac{2-2ty}{t^2+1}, \quad 0\leq t\leq 1, \quad y(0)=1$ with $h=0.1$; and
         \item $y'=\dfrac{y^2}{1+t}, \quad 1\leq t\leq 2, \quad y(1)=-\dfrac{1}{\ln 2}$ with $h=0.1$.
     \end{enumerate}
-    Show that the actual solutions are indeed $y(t)=\dfrac{2t+1}{t^2+1}$ and $y(t)=\dfrac{-1}{ln(t+1)}$, respectively. Plot the errors between your numerical solutions and the exact solutions. Draw your conclusion regarding to the order of error with respect to the time step $\dd t$.
+    Show that the actual solutions are indeed $y(t)=\dfrac{2t+1}{t^2+1}$ and $y(t)=\dfrac{-1}{\ln(t+1)}$, respectively. Plot the errors between your numerical solutions and the exact solutions. Draw your conclusion regarding to the order of error with respect to the time step $\dd t$.
 \end{problem}
 \textbf{Solution}. 
+\begin{enumerate}
+    \item We directly differentiate the function and see whether it is a solution. Let $y(t) = \dfrac{2t+1}{t^2+1}$. It is clear that $y(0) = 1$, and we have \begin{align*}
+        y'(t) &= \dfrac{2(t^2+1) - (2t+1)(2t)}{(t^2+1)^2}\\
+        &= \dfrac{2}{t^2+1} - \dfrac{2t}{t^2+1}\dfrac{2t+1}{t^2+1}\\
+        &= \dfrac{2 - 2ty}{t^2+1}.
+    \end{align*} The graph of the approximated solution and the actual solution can be seen below. The graph of error can also be seen below.
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P3a.png}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P3ae.png}
+    \end{center}
+    \item We directly differentiate the function and see whether it is a solution. Let $y(t) = \dfrac{-1}{\ln(t+1)}$. It is clear that $y(1) = -\dfrac{1}{\ln 2}$, and we have \begin{align*}
+        y'(t) &= \dfrac{1/(t+1)}{(\ln(t+1))^2}\\
+        &= \dfrac{y^2}{1+t}.
+    \end{align*} The graph of the approximated solution and the actual solution can be seen below. The graph of error can also be seen below.
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P3b.png}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P3be.png}
+    \end{center} \qed
+\end{enumerate}
 
 
 \newpage
@@ -179,6 +202,19 @@
     \end{enumerate}
 \end{problem}
 \textbf{Solution}. 
+\begin{enumerate}
+    \item Using Euler's method with \begin{equation*}
+        \omega_{i+1}=\omega_i+h\:(-y+hi+1), \quad i=1,2,\dots,\dfrac{5-0}{h}.
+    \end{equation*}
+    By Python, we have \begin{align*}
+        y(5)&\approx5.20302231455\quad\text{when $h=0.2$};\\
+        y(5)&\approx5.10463839769\quad\text{when $h=0.2$};\\
+        y(5)&\approx5.05562450276\quad\text{when $h=0.2$};
+    \end{align*}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P4a.jpg}
+    \end{center}
+\end{enumerate}
 
 
 \newpage
@@ -222,7 +258,22 @@
         \item $y'=\dfrac{y^2+y}{t}, \quad 1\leq t\leq 3, \quad y(1)=-2$ with $h=0.2$; actual solution $y(t)=\dfrac{2t}{1-2t}$.
     \end{enumerate}
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. By Python, we have the following results:
+\begin{enumerate}
+    \item The first graph is with approximated solution and the actual solution; the second graph is the error plot graph. In the error plot graph, I used lines to connect each pair of adjacent dots to increase visual clarity. \begin{center}
+        \includegraphics[width=0.7\textwidth]{P7a.png}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P7ae.png}
+    \end{center}
+    \item The first graph is with approximated solution and the actual solution; the second graph is the error plot graph. In the error plot graph, I used lines to connect each pair of adjacent dots to increase visual clarity.
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P7b.png}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P7be.png}
+    \end{center} \qed
+\end{enumerate}
 
 
 \newpage
@@ -341,7 +392,7 @@
         k_2&=h\:f(t_i+h/2, \omega_i+k_1/2),\\
         k_3&=h\:f(t_i+h/2, \omega_i+k_2/2),\\
         k_4&=h\:f(t_i+h, \omega_i+k_3),\\
-        \omega_{i+1}=\omega_{i}+\dfrac{1}{6}\left(k_1+2k_2+2k_3+k_4\right)
+        \omega_{i+1}&=\omega_{i}+\dfrac{1}{6}\left(k_1+2k_2+2k_3+k_4\right)
     \end{align*}
     when applied to the differential equation $y'=\lambda y$, can be written in the form $$\omega_{i+1}=\left(1+h\lambda+\dfrac{1}{2}(h\lambda)^2+\dfrac{1}{6}(h\lambda)^3+\dfrac{1}{24}(h\lambda)^4\right)\omega_{i}.$$
 \end{problem}
