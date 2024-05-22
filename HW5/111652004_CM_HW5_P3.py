@@ -39,7 +39,7 @@ def euler_method(f, true_y, alpha, a, b, h):
     for i in range(1, N + 1):
         t_i = a + i * h
         t_values.append(t_i)
-        y_0 += h * f(t_i, y_0)
+        y_0 += h * f(t_values[-2], y_0)
         approx_soln_list.append(y_0)
         real_soln_list.append(true_y(t_i))
 
@@ -57,16 +57,14 @@ def f_b(t, y):
 def true_y_b(t):
     return -1 / math.log(t + 1)
 
-# Get the solutions using Euler's method
+
 t_values_a, approx_soln_a, real_soln_a = euler_method(f_a, true_y_a, 1, 0, 1, 0.1)
 
-# Plot the results
 plot_arrays(t_values_a, approx_soln_a, real_soln_a, "Euler's Method Approximation vs. True Solution: 3a")
 plot_errors(t_values_a, approx_soln_a, real_soln_a, "Error Plot Graph for 3a")
 
-# Get the solutions using Euler's method
+
 t_values_b, approx_soln_b, real_soln_b = euler_method(f_b, true_y_b, -1 / math.log(2), 1, 2, 0.1)
 
-# Plot the results
 plot_arrays(t_values_b, approx_soln_b, real_soln_b, "Euler's Method Approximation vs. True Solution: 3b")
 plot_errors(t_values_b, approx_soln_b, real_soln_b, "Error Plot Graph for 3b")

@@ -34,7 +34,7 @@ def modified_euler_method(f, true_y, alpha, a, b, h):
     for i in range(1, N + 1):
         t_i = a + i * h
         t_values.append(t_i)
-        y_0 += h * f(t_i - h / 2, y_0 + h * f(t_i - h, y_0) / 2)
+        y_0 += h * (f(t_values[-2], y_0) + f(t_i, y_0 + h * f(t_values[-2], y_0))) / 2
         approx_soln_list.append(y_0)
         real_soln_list.append(true_y(t_i))
 
@@ -52,17 +52,13 @@ def f_b(t, y):
 def true_y_b(t):
     return 2 * t / (1 - 2 * t)
 
-# Get the solutions using modified Euler's method
+
 t_values_a, approx_soln_a, real_soln_a = modified_euler_method(f_a, true_y_a, -1 / math.log(2), 1, 2, 0.1)
 
-# Plot the results
 plot_arrays(t_values_a, approx_soln_a, real_soln_a, "Modified Euler Method Approximation vs. True Solution: 7a")
 plot_errors(t_values_a, approx_soln_a, real_soln_a, "Error Plot Graph for 7a")
 
-
-# Get the solutions using modified Euler's method
 t_values_b, approx_soln_b, real_soln_b = modified_euler_method(f_b, true_y_b, -2, 1, 3, 0.2)
 
-# Plot the results
 plot_arrays(t_values_b, approx_soln_b, real_soln_b, "Modified Euler Method Approximation vs. True Solution: 7b")
 plot_errors(t_values_b, approx_soln_b, real_soln_b, "Error Plot Graph for 7b")

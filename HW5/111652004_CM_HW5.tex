@@ -102,7 +102,7 @@
 \newcommand{\vast}{\bBigg@{4}}
 \newcommand{\Vast}{\bBigg@{5}}
 \makeatother
-\title{Homework 5 of Computational Mathematics}
+\title{Homework 5 of Computational Mathematics\thanks{For further information (such as codes), please refer to \url{https://github.com/eiken59/CM_HW/tree/main/HW5}.}}
 \author{Chang, Yung-Hsuan\\111652004\\Department of Applied Mathematics}
 
 \begin{document}
@@ -193,6 +193,11 @@
     \end{center} \qed
 \end{enumerate}
 
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{P3.png}\\
+    The code for Problem 3
+\end{center}
+
 
 \newpage
 \begin{problem}\label{problem 4} % 5.2 11
@@ -208,16 +213,17 @@
         \omega_{i+1}=\omega_i+h\:(-y+hi+1), \quad i=1,2,\dots,\dfrac{5-0}{h}.
     \end{equation*}
     By Python, we have \begin{align*}
-        y(5)&\approx5.20302231455\quad\text{when $h=0.2$};\\
-        y(5)&\approx5.10463839769\quad\text{when $h=0.2$};\\
-        y(5)&\approx5.05562450276\quad\text{when $h=0.2$};
+        y(5)&\approx5.003777893186297\quad\text{when $h=0.2$};\\
+        y(5)&\approx5.005153775207321\quad\text{when $h=0.1$};\\
+        y(5)&\approx5.005920529220334\quad\text{when $h=0.05$};
     \end{align*}
     \item By assuming (5.14) is true and $\delta=10^{-6}$, the minimal value of $E(h)$ occurs when $$h=\sqrt{\dfrac{2\cdot10^{-6}}{\max_{t\in[0, 5]}|e^{-t}|}}=\sqrt{2\cdot10^{-6}}\approx1.4142135623731\times10^{-3}.$$ \qed
-    \begin{center}
-        \includegraphics[width=0.7\textwidth]{P4a.jpg}\\
-        The code for Problem 4a.
-    \end{center}
 \end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{P4.png}\\
+    The code for Problem 4a
+\end{center}
 
 
 \newpage
@@ -278,6 +284,11 @@
     \end{center} \qed
 \end{enumerate}
 
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{P7.png}\\
+    The code for Problem 7
+\end{center}
+
 
 \newpage
 \begin{problem}\label{problem 8} % 5.4 30
@@ -312,7 +323,8 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P9.png}
+    \includegraphics[width=0.9\textwidth]{P9.png}\\
+    The code for Problem 9
 \end{center}
 
 
@@ -337,7 +349,8 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P10.png}
+    \includegraphics[width=0.9\textwidth]{P10.png}\\
+    The code for Problem 10
 \end{center}
 
 
@@ -379,7 +392,7 @@
 
 \newpage
 \begin{problem}\label{problem 15} % 5.9 8a
-    Suppose the swinging pendulum described in the lead example of this chapter is $2$ ft long and that $g = 32.17\ \text{ft}/\text{s}^2$. With $h = 0.1\ \text{s}$, compare the angle $\theta$ obtained for the following two initial-value problems at $t = 0, 1, 2$. $$\dfrac{\dd^2\theta}{\dd t^2}+\dfrac{g}{L}\sin\theta=0, \quad \theta(0)=\dfrac{\pi}{6},\quad \theta'(0)=0.$$ You shall use Adams fourth order predictor-corrector algorithm to obtain your numerical answer.
+    Suppose the swinging pendulum described in the lead example of this chapter is $2$ ft long and that $g = 32.17\ \text{ft}/\text{s}^2$. With $h = 0.1\ \text{s}$, compare the angle $\theta$ obtained for the following two initial-value problems at $t = 0, 1, 2$.\footnote{I read this as ``find values of $\theta(1)$ and $\theta(2)$ given $\theta(0)=\pi/6$.''} $$\dfrac{\dd^2\theta}{\dd t^2}+\dfrac{g}{L}\sin\theta=0, \quad \theta(0)=\dfrac{\pi}{6},\quad \theta'(0)=0.$$ You shall use Adams fourth-order predictor-corrector algorithm to obtain your numerical answer.
 \end{problem}
 \textbf{Solution}. 
 
@@ -427,6 +440,23 @@
     \end{align*}
     when applied to the differential equation $y'=\lambda y$, can be written in the form $$\omega_{i+1}=\left(1+h\lambda+\dfrac{1}{2}(h\lambda)^2+\dfrac{1}{6}(h\lambda)^3+\dfrac{1}{24}(h\lambda)^4\right)\omega_{i}.$$
 \end{problem}
-\textbf{Solution}.
+\textbf{Solution}. We have $f(t, w)=\lambda w$. Hence, we have
+\begin{align*}
+    k_1&=h\lambda\omega_i,\\
+    k_2&=h\lambda(\omega_i+k_1/2)\\
+    &=h\lambda\omega_i+(h\lambda)^2\omega_i/2,\\
+    k_3&=h\lambda(\omega_i+k_2/2)\\
+    &=h\lambda\omega_i+h\lambda(h\lambda\omega_i+(h\lambda)^2\omega_i/2)/2\\
+    &=h\lambda\omega_i+(h\lambda)^2\omega_i/2+(h\lambda)^3\omega_i/4,\\
+    k_4&=h\lambda(\omega_i+k_3)\\
+    &=h\lambda\omega_i+(h\lambda)^2\omega_i+(h\lambda)^3\omega_i/2+(h\lambda)^4\omega_i/4.
+\end{align*}
+Therefore,
+\begin{align*}
+    \omega_{i+1}&=\omega_{i}+\dfrac{1}{6}\left(k_1+2k_2+2k_3+k_4\right)\\
+    &=\omega_i+\dfrac{1}{6}[\left(h\lambda\omega_i\right)\\&\qquad\quad\qquad+2\left(h\lambda\omega_i+(h\lambda)^2\omega_i/2\right)\\&\qquad\quad\qquad+2\left(h\lambda\omega_i+(h\lambda)^2\omega_i/2+(h\lambda)^3\omega_i/4\right)\\&\qquad\quad\qquad+\left(h\lambda\omega_i+(h\lambda)^2\omega_i+(h\lambda)^3\omega_i/2+(h\lambda)^4\omega_i/4\right)]\\
+    &=\omega_i+\dfrac{1}{6}\left(6\cdot h\lambda\omega_i+3\cdot(h\lambda)^2\omega_i+1\cdot(h\lambda)^3\omega_i+\dfrac{1}{4}\cdot(h\lambda)^4\omega_i\right)\\
+    &=\omega_i\left(1+h\lambda+\dfrac{1}{2}(h\lambda)^2+\dfrac{1}{6}(h\lambda)^3+\dfrac{1}{24}(h\lambda)^4\right).
+\end{align*} \qed
 
 \end{document}
