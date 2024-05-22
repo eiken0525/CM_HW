@@ -16,6 +16,7 @@
 \usepackage{tcolorbox}
 \usepackage{extarrows}
 
+
 \setlist{nosep}
 \setlist[enumerate]{label=\alph*.}
 
@@ -211,8 +212,10 @@
         y(5)&\approx5.10463839769\quad\text{when $h=0.2$};\\
         y(5)&\approx5.05562450276\quad\text{when $h=0.2$};
     \end{align*}
+    \item By assuming (5.14) is true and $\delta=10^{-6}$, the minimal value of $E(h)$ occurs when $$h=\sqrt{\dfrac{2\cdot10^{-6}}{\max_{t\in[0, 5]}|e^{-t}|}}=\sqrt{2\cdot10^{-6}}\approx1.4142135623731\times10^{-3}.$$ \qed
     \begin{center}
-        \includegraphics[width=0.7\textwidth]{P4a.jpg}
+        \includegraphics[width=0.7\textwidth]{P4a.jpg}\\
+        The code for Problem 4a.
     \end{center}
 \end{enumerate}
 
@@ -290,13 +293,26 @@
 
 \newpage
 \begin{problem}\label{problem 9} % 5.5 2ab
-    Use the Runge-Kutta Fehlberg algorithm with tolerance $TOL = 10^{-4}$ to approximate the solution to the following initial-value problems.
+    Use the Runge-Kutta-Fehlberg algorithm with tolerance $TOL = 10^{-4}$ to approximate the solution to the following initial-value problems.
     \begin{enumerate}
         \item $y'=\left(\dfrac{y}{t}\right)^2+\dfrac{y}{t}, \quad 1\leq t\leq 1.2, \quad y(1)=1$ with $hmax=0.05$ and $hmin=0.02$; and
         \item $y'=\sin t+e^{-t}, \quad 0\leq t\leq 1, \quad y(0)=0$ with $hmax=0.25$ and $hmin=0.02.$
     \end{enumerate}
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. The code is provided after the two graphs.
+\begin{enumerate}
+    \item $\ $
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P9a.png}
+    \end{center}
+    \item $\ $
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P9b.png}
+    \end{center} \qed
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{P9.png}
+    \end{center}
+\end{enumerate}
 
 
 \newpage
