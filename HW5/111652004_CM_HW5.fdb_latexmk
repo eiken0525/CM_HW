@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1716389618 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716389619 0
-  "111652004_CM_HW5.xdv" 1716389618 117580 72a4e862bb7bc6939fb53b0541ac90bc "xelatex"
+["xdvipdfmx"] 1716392000 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716392002 0
+  "111652004_CM_HW5.xdv" 1716392000 120732 e24394b051a6b8f9eaf23a61f2b7e4e5 "xelatex"
   (generated)
   "111652004_CM_HW5.pdf"
   (rewritten before read)
-["xelatex"] 1716389617 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716389619 0
-  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716389616 21819 5d19696ca0ed4b2dc60efe42c25efdff ""
+["xelatex"] 1716391999 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716392002 0
+  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716391998 22539 4dd8e7d1eabc95940758e9a77107a868 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -166,9 +166,9 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1708868527 10502812 d9bc4cbf3c65ef7eed6035287310d941 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "111652004_CM_HW5.aux" 1716389618 1458 3fc1cc8ed781a3f7fe1713549215f307 "xelatex"
-  "111652004_CM_HW5.out" 1716389618 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW5.tex" 1716389616 21819 5d19696ca0ed4b2dc60efe42c25efdff ""
+  "111652004_CM_HW5.aux" 1716392000 1459 06100db190c0aa347260e4ce6f40287f "xelatex"
+  "111652004_CM_HW5.out" 1716392000 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW5.tex" 1716391998 22539 4dd8e7d1eabc95940758e9a77107a868 ""
   "P10.png" 1716375021 323228 4f5ce71a8d7ac7ad4c432f95e22a7ced ""
   "P10a.png" 1716374794 43693 9408af13b2e90721cf54fb472b180249 ""
   "P10b.png" 1716374794 39217 5affbe0255345e3d12c86547e6b3d762 ""
@@ -178,6 +178,9 @@
   "P3b.png" 1716388018 25409 ef26080a22244c371d210325afd69b2d ""
   "P3be.png" 1716388018 30185 a9de83f022ab5e8c649c9e728e301aa4 ""
   "P4.png" 1716388203 39054 5ea76a25c06d5c1b20aa0389b71c4fe0 ""
+  "P5.png" 1716391919 178318 e34cce31be7e26e176244cd207e3e11b ""
+  "P5a.png" 1716391808 21636 40555485164093eb7e79f3fca24bf8b2 ""
+  "P5b.png" 1716391808 22175 3badbd6acdb681ae8b8ff61c736f7422 ""
   "P7.png" 1716388614 246641 537b15a8d7ba3c9f6430f1845e1a01ba ""
   "P7a.png" 1716388537 25931 f12f323507bef3f7b562f9d1ad0baa0d ""
   "P7ae.png" 1716388537 34560 7f197ced471ec7a9bc7191d264255e4b ""

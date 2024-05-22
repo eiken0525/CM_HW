@@ -194,7 +194,7 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P3.png}\\
+    \includegraphics[width=0.85\textwidth]{P3.png}\\
     The code for Problem 3
 \end{center}
 
@@ -221,7 +221,7 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P4.png}\\
+    \includegraphics[width=0.85\textwidth]{P4.png}\\
     The code for Problem 4a
 \end{center}
 
@@ -230,11 +230,32 @@
 \begin{problem}\label{problem 5} % 5.3 2bc
     Use Taylor's method of order two to approximate the solutions for each of the following initial-value problems.
     \begin{enumerate}
-        \item $y'=\dfrac{1+y}{1-t}, \quad 1\leq t\leq 2, \quad y(1)=2$ with $h=0.5$; and
+        \item $y'=\dfrac{1+t}{1+y}, \quad 1\leq t\leq 2, \quad y(1)=2$ with $h=0.5$; and
         \item $y'=-y+t\sqrt{y}, \quad 2\leq t\leq 3, \quad y(2)=2$ with $h=0.25$.
     \end{enumerate}
 \end{problem}
 \textbf{Solution}. 
+\begin{enumerate}
+    \item By calculus, \begin{align*}
+        \dfrac{\dd}{\dd t}\dfrac{1+t}{1+y}=\dfrac{1}{1+y}-\dfrac{(1+t)^2}{(1+y)^3}.
+    \end{align*}
+    By Python, we have the following result:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P5a.png}
+    \end{center}
+    \item By calculus, \begin{align*}
+        \dfrac{\dd}{\dd t}\left(-y+t\sqrt{y}\right)=y+\sqrt{y}-\dfrac{3}{2}t\sqrt{y}+\dfrac{t^2}{2}.
+    \end{align*}
+    By Python, we have the following result:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P5b.png}
+    \end{center} \qed
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{P5.png}\\
+    The code for Problem 5
+\end{center}
 
 
 \newpage
@@ -285,7 +306,7 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P7.png}\\
+    \includegraphics[width=0.85\textwidth]{P7.png}\\
     The code for Problem 7
 \end{center}
 
@@ -323,7 +344,7 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P9.png}\\
+    \includegraphics[width=0.85\textwidth]{P9.png}\\
     The code for Problem 9
 \end{center}
 
@@ -349,7 +370,7 @@
 \end{enumerate}
 
 \begin{center}
-    \includegraphics[width=0.9\textwidth]{P10.png}\\
+    \includegraphics[width=0.85\textwidth]{P10.png}\\
     The code for Problem 10
 \end{center}
 
