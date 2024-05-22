@@ -321,10 +321,24 @@
     Use each of the Adams-Bashforth methods to approximate the solutions to the following initial-value problems. In each case use starting values obtained from the Runge-Kutta method of order four. Compare the results to the actual values.
     \begin{enumerate}
         \item $y'=\dfrac{y}{t}-\left(\dfrac{y}{t}\right)^2, \quad1\leq t\leq 2, \quad y(1)=1$ with $h=0.1$; actual solution $y(t)=\dfrac{t}{1+\ln(t)}$; and
-        \item $y'=-5y+5t^2+2t, \quad 0\leq t\leq 1, \quad y(0)=\dfrac{1}{3}$ with $h=0.1$; actual solution $y(t)=-3+\dfrac{2}{1+e^{-2t}}$.
+        \item $y'=-5y+5t^2+2t, \quad 0\leq t\leq 1, \quad y(0)=\dfrac{1}{3}$ with $h=0.1$; actual solution $y(t)=t^2+\dfrac{e^{-5t}}{3}$.
     \end{enumerate}
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. The code is provided after the two graphs.
+\begin{enumerate}
+    \item $\ $
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P10a.png}
+    \end{center}
+    \item $\ $
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P10b.png}
+    \end{center} \qed
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{P10.png}
+\end{center}
 
 
 \newpage

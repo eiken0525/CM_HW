@@ -17,10 +17,6 @@ def plot_errors(x_axis, y_1s, y_2s, title):
     y_diff = [abs(y1 - y2) for y1, y2 in zip(y_1s, y_2s)]
     plt.plot(x_axis, y_diff, 's-', label='Difference Between Approximation and True Solution')
 
-    for i in range(len(x_axis)):
-        plt.annotate(f'{abs(y_1s[i] - y_2s[i]):.2e}', (x_axis[i], min(y_1s[i], y_2s[i])),
-                     textcoords="offset points", xytext=(0,-15), ha='center')
-
     plt.xlabel('t')
     plt.ylabel('Error')
     plt.title(title)
