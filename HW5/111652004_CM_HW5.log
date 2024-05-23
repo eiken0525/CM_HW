@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  23 MAY 2024 01:02
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  23 MAY 2024 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -749,152 +749,160 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 114.
 Package mdframed Info: Not enough space on this page on input line 120.
- [1]
+ [1] [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 137.
-Package mdframed Info: Not enough space on this page on input line 147.
- [2]
+(mdframed)              on input line 146.
+Package mdframed Info: Not enough space on this page on input line 156.
+ [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 163.
-Package mdframed Info: Not enough space on this page on input line 170.
+(mdframed)              on input line 172.
+Package mdframed Info: Not enough space on this page on input line 179.
 File: P3a.png Graphic file (type bmp)
 <P3a.png>
 File: P3ae.png Graphic file (type bmp)
 <P3ae.png>
- [3]
+ [4]
 File: P3b.png Graphic file (type bmp)
 <P3b.png>
 File: P3be.png Graphic file (type bmp)
 <P3be.png>
- [4]
+ [5]
 File: P3.png Graphic file (type bmp)
 <P3.png>
- [5] [6]
+ [6] [7]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 203.
-Package mdframed Info: Not enough space on this page on input line 209.
+(mdframed)              on input line 212.
+Package mdframed Info: Not enough space on this page on input line 218.
 File: P4.png Graphic file (type bmp)
 <P4.png>
- [7]
+ [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 230.
-Package mdframed Info: Not enough space on this page on input line 236.
+(mdframed)              on input line 239.
+Package mdframed Info: Not enough space on this page on input line 245.
 File: P5a.png Graphic file (type bmp)
 <P5a.png>
 File: P5b.png Graphic file (type bmp)
 <P5b.png>
- [8]
+ [9]
 File: P5.png Graphic file (type bmp)
 <P5.png>
- [9]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 262.
-Package mdframed Info: Not enough space on this page on input line 280.
  [10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 285.
-Package mdframed Info: Not enough space on this page on input line 290.
+(mdframed)              on input line 271.
+Package mdframed Info: Not enough space on this page on input line 289.
+File: P6a.png Graphic file (type bmp)
+<P6a.png>
+ [11] [12]
+File: P6c.png Graphic file (type bmp)
+<P6c.png>
+ [13] [14]
+File: P6.png Graphic file (type bmp)
+<P6.png>
+ [15] [16]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 407.
+Package mdframed Info: Not enough space on this page on input line 412.
 File: P7a.png Graphic file (type bmp)
 <P7a.png>
 File: P7ae.png Graphic file (type bmp)
 <P7ae.png>
- [11]
+ [17]
 File: P7b.png Graphic file (type bmp)
 <P7b.png>
 File: P7be.png Graphic file (type bmp)
 <P7be.png>
 File: P7.png Graphic file (type bmp)
 <P7.png>
- [12] [13]
+ [18] [19]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 315.
-Package mdframed Info: Not enough space on this page on input line 322.
- [14]
+(mdframed)              on input line 437.
+Package mdframed Info: Not enough space on this page on input line 444.
+ [20]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 327.
-Package mdframed Info: Not enough space on this page on input line 333.
+(mdframed)              on input line 449.
+Package mdframed Info: Not enough space on this page on input line 455.
 File: P9a.png Graphic file (type bmp)
 <P9a.png>
 File: P9b.png Graphic file (type bmp)
 <P9b.png>
 File: P9.png Graphic file (type bmp)
 <P9.png>
- [15] [16]
+ [21] [22]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 353.
-Package mdframed Info: Not enough space on this page on input line 359.
+(mdframed)              on input line 475.
+Package mdframed Info: Not enough space on this page on input line 481.
 File: P10a.png Graphic file (type bmp)
 <P10a.png>
 File: P10b.png Graphic file (type bmp)
 <P10b.png>
- [17]
+ [23]
 File: P10.png Graphic file (type bmp)
 <P10.png>
- [18]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 379.
-Package mdframed Info: Not enough space on this page on input line 385.
- [19]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 390.
-Package mdframed Info: Not enough space on this page on input line 392.
- [20]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 397.
-Package mdframed Info: Not enough space on this page on input line 403.
- [21]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 408.
-Package mdframed Info: Not enough space on this page on input line 410.
- [22]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 415.
-Package mdframed Info: Not enough space on this page on input line 417.
- [23]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 422.
-Package mdframed Info: Not enough space on this page on input line 430.
  [24]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 435.
-Package mdframed Info: Not enough space on this page on input line 441.
+(mdframed)              on input line 501.
+Package mdframed Info: Not enough space on this page on input line 507.
  [25]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 446.
-Package mdframed Info: Not enough space on this page on input line 448.
+(mdframed)              on input line 512.
+Package mdframed Info: Not enough space on this page on input line 514.
  [26]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 453.
-Package mdframed Info: Not enough space on this page on input line 463.
- [27] [28] (./111652004_CM_HW5.aux)
+(mdframed)              on input line 519.
+Package mdframed Info: Not enough space on this page on input line 525.
+ [27]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 530.
+Package mdframed Info: Not enough space on this page on input line 532.
+ [28]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 537.
+Package mdframed Info: Not enough space on this page on input line 539.
+ [29]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 544.
+Package mdframed Info: Not enough space on this page on input line 552.
+ [30]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 557.
+Package mdframed Info: Not enough space on this page on input line 563.
+ [31]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 568.
+Package mdframed Info: Not enough space on this page on input line 570.
+ [32]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 575.
+Package mdframed Info: Not enough space on this page on input line 585.
+ [33] [34] (./111652004_CM_HW5.aux)
 Package rerunfilecheck Info: File `111652004_CM_HW5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22606 strings out of 476683
- 426419 string characters out of 5804047
+ 22630 strings out of 476683
+ 426684 string characters out of 5804047
  1855018 words of memory out of 5000000
- 42439 multiletter control sequences out of 15000+600000
+ 42460 multiletter control sequences out of 15000+600000
  523064 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,104p,746b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW5.xdv (29 pages, 120732 bytes).
+Output written on 111652004_CM_HW5.xdv (35 pages, 138836 bytes).

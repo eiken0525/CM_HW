@@ -124,12 +124,21 @@
         |f(t, y_1)-f(t, y_2)|&=\dfrac{2t|y_1-y_2|}{t^2}\\
         &\leq2|y_1-y_2|,
     \end{align*}
-    which implies $f$ satisfies a Lipschitz condition in the variable $y$ on $D$ with a Lipschitz constant $2$. By Theorem 5.4, the initial-value problem has a unique solution. Using algebra, we have \begin{align*}
+    which implies $f$ satisfies a Lipschitz condition in the variable $y$ on $D$ with a Lipschitz constant $2$. By Theorem 5.4, the initial-value problem has a unique solution. Using calculus, we have \begin{align*}
         t^2y'+2ty&=\sin 2t\\
         t^2y&=-\dfrac{1}{2}\cos2t+C\\
         \overset{y(1)=2}{\implies}\qquad\qquad\quad\quad y&=\dfrac{-\cos2t+4+\cos2}{2t^2}.
     \end{align*}
-    \item 
+    \item We can find that it is a Bernoulli's equation in the form of \begin{equation*}
+        y'+(1)\cdot y=t\cdot y^{1/2}.
+    \end{equation*}
+    Hence, we can find the solution as follows:
+    \begin{align*}
+        y'+(1)\cdot y&=t\cdot y^{1/2}\\
+        y'y^{-1/2}+y^{1/2}&=t\\
+        \text{(Let $u=y^{1/2}$)}\qquad\qquad2u'+u&=t.
+    \end{align*}
+    It is clear that the homogeneous solution is $u_h=Ce^{-t/2}$. The non-homogeneous solution will be $u_n=-t+2$. Hence, it has a unique solution; the general solution of the original equation is $y_g=(Ce^{-t/2}-t+2)^2$. By the assumption of the initial valule, we have $y=\left(e\sqrt{2}\cdot e^{-t/2}-t+2\right)^2$. Since it does not satisfies a Lipschitz condition on $D=[2, 3]\times\mathbb{R}$ (here $y\geq0$), Theorem 5.4 cannot be applied in this case. \qed
 \end{enumerate}
 
 
@@ -279,7 +288,120 @@
     \end{enumerate}
 \end{problem}
 \textbf{Solution}. 
+\begin{enumerate}
+    \item By calculus, \begin{align*}
+        \dfrac{\dd}{\dd t}\left(\dfrac{2}{t}y+t^2e^t\right)&=-\dfrac{2}{t^2}y+\dfrac{2}{t}y'+2te^t+t^2e^t\\
+        &=\dfrac{2y}{t^2}+(4t+t^2)e^t.
+    \end{align*}
+    By Python, we have the following result:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P6a.png}
+    \end{center}
+    \item By (a), we have the following table:
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $t$ & Approximation & Real Value \\
+            \hline
+            $1$ & $0$ & $0$ \\
+            \hline
+            $1.1$ & $0.3397852286$ & $0.3459198765$ \\
+            \hline
+            $1.2$ & $0.8521434493$ & $0.8666425358$ \\
+            \hline
+            $1.3$ & $1.5817695052$ & $1.6072150782$ \\
+            \hline
+            $1.4$ & $2.5809966497$ & $2.6203595512$ \\
+            \hline
+            $1.5$ & $3.9109845593$ & $3.9676662942$ \\
+            \hline
+            $1.6$ & $5.6430810358$ & $5.7209615256$ \\
+            \hline
+            $1.7$ & $7.8603816039$ & $7.9638734778$ \\
+            \hline
+            $1.8$ & $10.6595144804$ & $10.7936246605$ \\
+            \hline
+            $1.9$ & $14.1526820904$ & $14.3230815359$ \\
+            \hline
+            $2.0$ & $18.4699944826$ & $18.6830970819$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+    Using linear interpolation, we have 
+    \begin{align*}
+        y(1.04)&=0.4\cdot y(1.0)+0.6\cdot y(1.1)\\
+        &=0.2038711371,\\
+        y(1.55)&=0.5\cdot y(1.5)+0.5\cdot y(1.6)\\
+        &=4.7770327976,\\
+        y(1.97)&=0.3\cdot y(1.9)+0.7\cdot y(2.0)\\
+        &=17.1748007649,
+    \end{align*}
+    where the real values are
+    \begin{align*}
+        y(1.04)&=0.2075519259,\\
+        y(1.55)&=4.8443139099,\\
+        y(1.97)&=17.3750924181.
+    \end{align*}
+    \item By calculus, \begin{align*}
+        \dfrac{\dd}{\dd t}\left(\dfrac{2y}{t^2}+(4t+t^2)e^t\right)&=\dfrac{-4y}{t^3}+\dfrac{2y'}{t^2}+(t^2+6t+4)e^t\\
+        &=(t^2+6t+6)e^t,\\
+        \dfrac{\dd}{\dd t}\left((t^2+6t+6)e^t\right)&=(t^2+8t+12)e^t.
+    \end{align*}
+    By Python, we have the following result:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P6c.png}
+    \end{center}
+    \item By (c), we have the following table:
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $t$ & Approximation & Real Value \\
+            \hline
+            $1$ & $0$ & $0$ \\
+            \hline
+            $1.1$ & $0.3459126888$ & $0.3459198765$ \\
+            \hline
+            $1.2$ & $0.8666257293$ & $0.8666425358$ \\
+            \hline
+            $1.3$ & $1.6071858864$ & $1.6072150782$ \\
+            \hline
+            $1.4$ & $2.6203148428$ & $2.6203595512$ \\
+            \hline
+            $1.5$ & $3.9676025389$ & $3.9676662942$ \\
+            \hline
+            $1.6$ & $5.7208747556$ & $5.7209615256$ \\
+            \hline
+            $1.7$ & $7.9637592441$ & $7.9638734778$ \\
+            \hline
+            $1.8$ & $10.7934779832$ & $10.7936246605$ \\
+            \hline
+            $1.9$ & $14.3228968484$ & $14.3230815359$ \\
+            \hline
+            $2.0$ & $18.6828681680$ & $18.6830970819$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+    Using linear interpolation, we have 
+    \begin{align*}
+        y(1.04)&=0.4\cdot y(1.0)+0.6\cdot y(1.1)\\
+        &=0.2075476133,\\
+        y(1.55)&=0.5\cdot y(1.5)+0.5\cdot y(1.6)\\
+        &=4.8442386472,\\
+        y(1.97)&=0.3\cdot y(1.9)+0.7\cdot y(2.0)\\
+        &=17.3748767721,
+    \end{align*}
+    where the real values are
+    \begin{align*}
+        y(1.04)&=0.2075519259,\\
+        y(1.55)&=4.8443139099,\\
+        y(1.97)&=17.3750924181.
+    \end{align*}
+\end{enumerate}
 
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{P6.png}\\
+    The code for Problem 6
+\end{center}
 
 \newpage
 \begin{problem}\label{problem 7} % 5.4 4bc

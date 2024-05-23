@@ -1,11 +1,10 @@
 import math
 import matplotlib.pyplot as plt
 
-def plot_arrays(x_axis, y_1s, y_2s, y_3s, title):
+def plot_arrays(x_axis, y_1s, y_2s, title):
     plt.figure(figsize=(10, 6))
-    plt.plot(x_axis, y_1s, 'o', label='Approximated Solution by Adams-Bashforth Method')
-    plt.plot(x_axis, y_2s, 'D', label='Approximated Solution by Runge-Kutta Method')
-    plt.plot(x_axis, y_3s, 'x', label='Actual Solution')
+    plt.plot(x_axis, y_2s, 'o', label='Actual Solution')
+    plt.plot(x_axis, y_1s, '^', color="black", markerfacecolor='none', label='Approximated Solution by Adams-Bashforth Method')
 
     plt.xlabel('t')
     plt.ylabel('y(t)')
@@ -37,19 +36,19 @@ def runge_kutta_method(f, true_y, alpha, a, b, h):
     t_values = [a]
 
     for i in range(1, N + 1):
-        t_i = a + i * h
-        real_soln_list.append(true_y(t_i))
-        t_values.append(t_i)
+        t = t_values[-1]
+        w = approx_soln_list[-1]
         if i < 1:
-            approx_soln_list.append(true_y(t_i))
+            approx_soln_list.append(true_y(t))
         else:
-            t = t_values[-1]
-            w = approx_soln_list[-1]
             k_1 = h * f(t, w)
             k_2 = h * f(t + h / 2, w + k_1 / 2)
             k_3 = h * f(t + h / 2, w + k_2 / 2)
-            k_4 = h * f(t_i, w + k_3)
+            k_4 = h * f(t + h, w + k_3)
             approx_soln_list.append(w + (k_1 + 2 * k_2 + 2 * k_3 + k_4) / 6)
+        t_i = a + i * h
+        real_soln_list.append(true_y(t_i))
+        t_values.append(t_i)
 
     return t_values, approx_soln_list, real_soln_list
 
@@ -69,10 +68,10 @@ t_values_a, approx_soln_a_RK, real_soln_a = runge_kutta_method(f_a, true_y_a, 1,
 
 t_values_a, approx_soln_a_AB, real_soln_a = adams_bashforth_method(f_a, true_y_a, approx_soln_a_RK[0:4], 1, 2, 0.1)
 
-plot_arrays(t_values_a, approx_soln_a_AB, approx_soln_a_RK, real_soln_a, "Adams-Bashforth and Runge-Kutta Approximations vs. True Solution: 10a")
+plot_arrays(t_values_a, approx_soln_a_AB, real_soln_a, "Adams-Bashforth Approximations vs. True Solution: 10a")
 
 t_values_b, approx_soln_b_RK, real_soln_b = runge_kutta_method(f_b, true_y_b, 1 / 3, 0, 1, 0.1)
 
 t_values_b, approx_soln_b_AB, real_soln_b = adams_bashforth_method(f_b, true_y_b, approx_soln_b_RK[0:4], 0, 1, 0.1)
 
-plot_arrays(t_values_b, approx_soln_b_AB, approx_soln_b_RK, real_soln_b, "Adams-Bashforth and Runge-Kutta Approximations vs. True Solution: 10b")
+plot_arrays(t_values_b, approx_soln_b_AB, real_soln_b, "Adams-Bashforth Approximations vs. True Solution: 10b")
