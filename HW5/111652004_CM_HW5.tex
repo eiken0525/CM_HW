@@ -438,7 +438,7 @@
     Show that the difference method 
     \begin{align*}
         \omega_0&=\alpha\\
-        \omega_{i+1}&\omega_i+a_1\:f(t_i, \omega_i)+a_2\:f(t_i+\alpha_2, \omega_1+\delta_2\:f(t_i, \omega_i)),
+        \omega_{i+1}&=\omega_i+a_1\:f(t_i, \omega_i)+a_2\:f(t_i+\alpha_2, \omega_1+\delta_2\:f(t_i, \omega_i)),
     \end{align*}
     for each $i=0,1,2,\dots, N-1$, cannot have local truncation error $\mathcal{O}(h^3)$ for any choice of constants $a_1$, $a_2$, $\alpha_2$, and $\delta_2$.
 \end{problem}
@@ -530,8 +530,16 @@
 \begin{problem}\label{problem 14} % 5.8 4
     Let $P(t)$ be the number of individuals in a population at time $t$, measured in years. If the average birth rate $b$ is constant and the average death rate $d$ is proportional to the size of the population (due to overcrowding), then the growth rate of the population is given by the logistic equation $$\dfrac{\dd P}{\dd t}(t)=b\:P(t)-k(P(t))^2,$$ where $d=k\:P(t)$. Suppose $P(0)=50976$, $b=2.9\times10^{-2}$, and $k=1.4\times 10^{-7}$. Find the population after 5 years using the extrapolation method (based on the Euler method and the midpoint method) with times step $h=0.1$. Justify the order of truncation error from your numerical answers.
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. Using the extrapolation method, by Python, the solution on $[0, 5]$ is approximated as follows:
 
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{P14.png}
+\end{center} \qed
+
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{P14 code.png}\\
+    The code for Problem 14
+\end{center}
 
 \newpage
 \begin{problem}\label{problem 15} % 5.9 8a
