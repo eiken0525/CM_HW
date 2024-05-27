@@ -1062,6 +1062,9 @@ INPUT P10.png
 INPUT ./P14.png
 INPUT ./P14.png
 INPUT P14.png
+INPUT ./P14 k.png
+INPUT ./P14 k.png
+INPUT P14 k.png
 INPUT ./P14 code.png
 INPUT ./P14 code.png
 INPUT P14 code.png
