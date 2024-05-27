@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  27 MAY 2024 21:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.25)  27 MAY 2024 21:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -888,27 +888,27 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 588.
 Package mdframed Info: Not enough space on this page on input line 596.
+ [33]
 File: P16b.png Graphic file (type bmp)
 <P16b.png>
- [33]
 File: P16c.png Graphic file (type bmp)
 <P16c.png>
- [34]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 613.
-Package mdframed Info: Not enough space on this page on input line 619.
- [35]
+ [34] [35]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 624.
-Package mdframed Info: Not enough space on this page on input line 626.
+Package mdframed Info: Not enough space on this page on input line 630.
  [36]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 631.
-Package mdframed Info: Not enough space on this page on input line 641.
- [37] [38] (./111652004_CM_HW5.aux)
+(mdframed)              on input line 635.
+Package mdframed Info: Not enough space on this page on input line 637.
+ [37]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 642.
+Package mdframed Info: Not enough space on this page on input line 652.
+ [38] [39] (./111652004_CM_HW5.aux)
 Package rerunfilecheck Info: File `111652004_CM_HW5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -919,6 +919,6 @@ Here is how much of TeX's memory you used:
  42509 multiletter control sequences out of 15000+600000
  523064 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,13n,104p,746b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,104p,811b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 111652004_CM_HW5.xdv (39 pages, 153224 bytes).
+Output written on 111652004_CM_HW5.xdv (40 pages, 157992 bytes).
