@@ -68,4 +68,4 @@ def f(t, y):
 
 t_values, approx_soln = extrapolation_method(f, 50976, 0, 5, 1e-9, 0.1000000001, 0.999999999)
 
-plot_array(t_values, approx_soln, "Approximation to the Logistic Equation: P14")
+plot_array(t_values, approx_soln, "Approximation to the Logistic Equation: 14")
