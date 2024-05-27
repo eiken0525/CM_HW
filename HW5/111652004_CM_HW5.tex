@@ -506,7 +506,18 @@
     \end{enumerate}
 \end{problem}
 \textbf{Solution}. 
+\begin{enumerate}
+    \item I use fixed-point iteration with accuracy $10^{-8}$ for each $\omega_{i+1}$, $i=2,3,\dots, 19$. The solution is approximated as follows:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P11a.png}
+    \end{center}
+    \item Since fix-point iteration converges linearly and Newton's method converges quadratically, Newton's method will speed the convergence over funcitonal iteration. \qed
+\end{enumerate}
 
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{P11.png}\\
+    The code for Problem 11 a
+\end{center}
 
 \newpage
 \begin{problem}\label{problem 12} % 5.6 12
