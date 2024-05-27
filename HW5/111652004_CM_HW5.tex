@@ -521,9 +521,27 @@
 
 \newpage
 \begin{problem}\label{problem 12} % 5.6 12
-    Derive the Adams-Bashforth three-step method by the following method. Set $$y(t_{i+1})=t(t_i)+ah\:f(t_i, y(t_i))+bh\:f(t_{i-1}, y(t_{i-1}))+ch\:f(t_{i-2}, y(t_{i-2})).$$ Expand $y(t_{i+1})$, $f(t_{i-2}, y(t_{i-2}))$, and $f(t_{i-1}, y(t_{i-1}))$ in Taylor series about $(t_i, y(t_i))$, and equate the coefficients of $h$, $h^2$, and $h^3$ to obtain $a$, $b$, and $c$.
+    Derive the Adams-Bashforth three-step method by the following method. Set $$y(t_{i+1})=y(t_i)+ah\:f(t_i, y(t_i))+bh\:f(t_{i-1}, y(t_{i-1}))+ch\:f(t_{i-2}, y(t_{i-2})).$$ Expand $y(t_{i+1})$, $f(t_{i-2}, y(t_{i-2}))$, and $f(t_{i-1}, y(t_{i-1}))$ in Taylor series about $(t_i, y(t_i))$, and equate the coefficients of $h$, $h^2$, and $h^3$ to obtain $a$, $b$, and $c$.
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. Since $y'(t)=f(t, y(t))$, \begin{equation*}
+    y(t_{i+1})=y(t_i)+ahy'(t_i)+bhy'(t_{i-1})+chy'(t_{i-2}),
+\end{equation*}
+where
+\begin{align*}
+    y(t_{i+1})&=y(t_i+h)\\
+    &=y(t_i)+hy'(t_i)+\dfrac{h^2}{2}y''(t_i)+\dfrac{h^3}{6}y'''(t_i)+\cdots,\\
+    y'(t_{i-1})&=y'(t_i-h)\\
+    &=y'(t_i)-hy''(t_i)+\dfrac{h^2}{2}y'''(t_i)-\cdots,\\
+    y'(t_{i-2})&=y'(t_i-2h)\\
+    &=y'(t_i)-2hy''(t_i)+\dfrac{4h^2}{2}y'''(t_i)-\cdots.
+\end{align*}
+Hence, we have 
+\begin{align*}
+    hy'(t_i)&=ahy'(t_i)+bhy'(t_i)+chy'(t_i)\\
+    \dfrac{h^2}{2}y''(t_i)&=-ah^2y''(t_i)-2chy''(t_i)\\
+    \dfrac{h^3}{6}y'''(t_i)&=\dfrac{bh^3}{2}y'''(t_i)+\dfrac{4ch^3}{2}y'''(t_i),
+\end{align*}
+which yields $(a, b, c)=\left(\dfrac{23}{12}, -\dfrac{4}{3}, \dfrac{5}{12}\right)$. \qed
 
 
 \newpage
@@ -570,13 +588,25 @@ Hence $y(5)=56751.0367687$. Since $k=3$ in the code, the order of truncation err
 \begin{problem}\label{problem 16} % 5.10 4
     Consider the differential equation $$y'=f(t, y), \quad a\leq t\leq b, \quad y(a)=\alpha.$$
     \begin{enumerate}
-        \item Show that $$y'(t_i)=\dfrac{-3y(t_y)+4y(t_{i+1}-y(t_{i+2}))}{2h}+\dfrac{h^2}{3}y'''(\xi_1)$$ for some $\xi\in(t_i, t_{i+2})$.
-        \item Part (a) suggests the difference method $$\omega_{i+2}=4\omega_{i+1}-3\omega_{i}-2h\:f(t_i, \omega_i), \quad\text{for}\ i=0,1,2\dots, N-2.$$ Use this method to solve $$y'-1-y, \quad 0\leq t\leq 1, \quad y(0)=0$$ with $h=0.1$. Use the starting values $\omega_0=0$ and $\omega_1=y(t_1)=1-e^{-0.1}$.
+        \item Show that $$y'(t_i)=\dfrac{-3y(t_y)+4y(t_{i+1})-y(t_{i+2})}{2h}+\dfrac{h^2}{3}y'''(\xi_1)$$ for some $\xi\in(t_i, t_{i+2})$.
+        \item Part (a) suggests the difference method $$\omega_{i+2}=4\omega_{i+1}-3\omega_{i}-2h\:f(t_i, \omega_i), \quad\text{for}\ i=0,1,2\dots, N-2.$$ Use this method to solve $$y'=1-y, \quad 0\leq t\leq 1, \quad y(0)=0$$ with $h=0.1$. Use the starting values $\omega_0=0$ and $\omega_1=y(t_1)=1-e^{-0.1}$.
         \item Repeat part (b) with $h=0.01$ and $\omega_1=1-e^{-0.01}$.
         \item Analyze this method for consistency, stability, and convergence.
     \end{enumerate}
 \end{problem}
 \textbf{Solution}.
+\begin{enumerate}
+    \item We have
+    \item By Python, the solution is approximated as follows:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P16b.png}
+    \end{center}
+    \item By Python, the solution is approximated as follows:
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P16c.png}
+    \end{center}
+    \item The characteristic polynomial is $$P(\lambda)=4\lambda-3\lambda^2,$$ which has roots $0, 4/3$. Since one of them is with magnitude greater than one, the method does not satisfy the root condition. Thus, it is not stable and not convergent.
+\end{enumerate}
 
 
 \newpage

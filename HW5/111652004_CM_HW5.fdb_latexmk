@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1716793671 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716793675 0
-  "111652004_CM_HW5.xdv" 1716793671 146028 be1697eb6e17a384b3c47a5bf6f9e8d0 "xelatex"
+["xdvipdfmx"] 1716816856 "111652004_CM_HW5.xdv" "111652004_CM_HW5.pdf" "111652004_CM_HW5" 1716816861 0
+  "111652004_CM_HW5.xdv" 1716816856 153224 6769d4508f94493c085e9d8f1c470bd3 "xelatex"
   (generated)
   "111652004_CM_HW5.pdf"
   (rewritten before read)
-["xelatex"] 1716793671 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716793675 0
-  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716793668 28305 3edca62ee7afde34ddc6b97d8d6d5c67 ""
+["xelatex"] 1716816856 "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" "111652004_CM_HW5.xdv" "111652004_CM_HW5" 1716816861 0
+  "/Users/eiken/Visual Studio/Github_Clone/CM_HW/HW5/111652004_CM_HW5.tex" 1716816666 29666 f3381cf8e22c29222f806aa590fd7e79 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -166,9 +166,9 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1708868527 10502812 d9bc4cbf3c65ef7eed6035287310d941 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "111652004_CM_HW5.aux" 1716793671 1459 7a76f61bbfebe252be35ca74278ae126 "xelatex"
-  "111652004_CM_HW5.out" 1716793671 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "111652004_CM_HW5.tex" 1716793668 28305 3edca62ee7afde34ddc6b97d8d6d5c67 ""
+  "111652004_CM_HW5.aux" 1716816856 1459 ede404c40132a65ce6cf928f520fd6d6 "xelatex"
+  "111652004_CM_HW5.out" 1716816856 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "111652004_CM_HW5.tex" 1716816666 29666 f3381cf8e22c29222f806aa590fd7e79 ""
   "P10.png" 1716474877 301013 6d1a47d6ba11627d8c8665e04d4e6d9a ""
   "P10a.png" 1716474800 33485 b34dbe93e728867c9652cc196cfd9690 ""
   "P10b.png" 1716474800 29937 4e1a0a318557bc7e89fc69fd6a3d54a1 ""
@@ -177,6 +177,8 @@
   "P14 code.png" 1716740166 224299 458c013bbb03dee4c346ceb13064b99e ""
   "P14 k.png" 1716778908 986376 2d741d2087eb9771c6ce7df3d223116f ""
   "P14.png" 1716787806 28279 2f77f86438d6fe5fc3e6593dad9dbd4a ""
+  "P16b.png" 1716816855 20428 06859859fd80081b03671e0d8717a359 ""
+  "P16c.png" 1716816855 21919 91d5b926c2f507c90f5e46e5777ef2aa ""
   "P3.png" 1716388008 264538 523387486b688da463760098690fd3b6 ""
   "P3a.png" 1716388018 25819 ca59ef224160e6b492d10122f61a720c ""
   "P3ae.png" 1716388018 30682 de0a75c15c66a55667edae4999fe56a6 ""
