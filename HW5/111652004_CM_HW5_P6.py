@@ -58,13 +58,33 @@ for i, j, k in zip(t_values_a, approx_soln_a, real_soln_a):
 
 t_values_c, approx_soln_c, real_soln_c = taylor_method(4, f_family, y, 0, 1, 2, 0.1)
 
-plot_arrays(t_values_c, approx_soln_c, real_soln_c, "Taylor's Method of Order Two Approximated Solution: 6c")
+plot_arrays(t_values_c, approx_soln_c, real_soln_c, "Taylor's Method of Order Four Approximated Solution: 6c")
 
 for i, j, k in zip(t_values_c, approx_soln_c, real_soln_c):
     print(f"${i :.1f}$ & ${j :.10f}$ & ${k :.10f}$ \\\\")
     print("\hline")
 
-for soln_list in [approx_soln_a, approx_soln_c, real_soln_c]:
-    print(f"{0.4 * soln_list[0] + 0.6 * soln_list[1] :.10f}")
+for soln_list in [approx_soln_a]:
+    print(f"{0.6 * soln_list[0] + 0.4 * soln_list[1] :.10f}")
     print(f"{0.5 * soln_list[5] + 0.5 * soln_list[6] :.10f}")
     print(f"{0.3 * soln_list[9] + 0.7 * soln_list[10] :.10f}")
+
+for t in [1.04, 1.55, 1.97]:
+    print(f"{y(t):.10f}")
+
+def cubic_hermite_interpolation(tuple1, tuple2, x):
+        x1, fx1, dfx1 = tuple1
+        x2, fx2, dfx2 = tuple2
+
+        df = (fx2-fx1)/(x2-x1)
+        ddf1 = (df - dfx1)/(x2-x1)
+        ddf2 = (dfx2 - df)/(x2-x1)
+        dddf = (ddf2 - ddf1)/(x2-x1)
+
+        return fx1 + (x-x1)*dfx1 + (x-x1)**2 * ddf1 + (x-x1)**2 * (x-x2)*dddf
+
+print(f"1.04: {cubic_hermite_interpolation((1, 0, f(1, 0)), (1.1, approx_soln_c[1], f(1.1, approx_soln_c[1])), 1.04): .10f}")
+print(f"1.55: {cubic_hermite_interpolation((1.5, approx_soln_c[5], f(1.5, approx_soln_c[5])), \
+    (1.6, approx_soln_c[6], f(1.6, approx_soln_c[6])), 1.55): .10f}")
+print(f"1.97: {cubic_hermite_interpolation((1.9, approx_soln_c[9], f(1.9, approx_soln_c[9])), \
+    (2, approx_soln_c[10], f(2, approx_soln_c[10])), 1.97): .10f}")

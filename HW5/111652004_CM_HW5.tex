@@ -329,8 +329,8 @@
     \end{center}
     Using linear interpolation, we have 
     \begin{align*}
-        y(1.04)&=0.4\cdot y(1.0)+0.6\cdot y(1.1)\\
-        &=0.2038711371,\\
+        y(1.04)&=0.6\cdot y(1.0)+0.4\cdot y(1.1)\\
+        &=0.1359140914,\\
         y(1.55)&=0.5\cdot y(1.5)+0.5\cdot y(1.6)\\
         &=4.7770327976,\\
         y(1.97)&=0.3\cdot y(1.9)+0.7\cdot y(2.0)\\
@@ -338,9 +338,9 @@
     \end{align*}
     where the real values are
     \begin{align*}
-        y(1.04)&=0.2075519259,\\
-        y(1.55)&=4.8443139099,\\
-        y(1.97)&=17.3750924181.
+        y(1.04)&=0.1199874971,\\
+        y(1.55)&=4.7886350208,\\
+        y(1.97)&=17.2792984356.
     \end{align*}
     \item By calculus, \begin{align*}
         \dfrac{\dd}{\dd t}\left(\dfrac{2y}{t^2}+(4t+t^2)e^t\right)&=\dfrac{-4y}{t^3}+\dfrac{2y'}{t^2}+(t^2+6t+4)e^t\\
@@ -381,20 +381,17 @@
             \hline
         \end{tabular}
     \end{center}
-    Using linear interpolation, we have 
+    Using cubic Hermite polynomial, we have 
     \begin{align*}
-        y(1.04)&=0.4\cdot y(1.0)+0.6\cdot y(1.1)\\
-        &=0.2075476133,\\
-        y(1.55)&=0.5\cdot y(1.5)+0.5\cdot y(1.6)\\
-        &=4.8442386472,\\
-        y(1.97)&=0.3\cdot y(1.9)+0.7\cdot y(2.0)\\
-        &=17.3748767721,
+        H_3(1.04)&=0.1199703835,\\
+        H_3(1.55)&=4.7885271557,\\
+        H_3(1.97)&=17.2790404208,
     \end{align*}
     where the real values are
     \begin{align*}
-        y(1.04)&=0.2075519259,\\
-        y(1.55)&=4.8443139099,\\
-        y(1.97)&=17.3750924181.
+        y(1.04)&=0.1199874971,\\
+        y(1.55)&=4.7886350208,\\
+        y(1.97)&=17.2792984356.
     \end{align*} \qed
 \end{enumerate}
 
