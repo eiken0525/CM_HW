@@ -1065,6 +1065,18 @@ INPUT P11a.png
 INPUT ./P11.png
 INPUT ./P11.png
 INPUT P11.png
+INPUT ./P13a.png
+INPUT ./P13a.png
+INPUT P13a.png
+INPUT ./P13b.png
+INPUT ./P13b.png
+INPUT P13b.png
+INPUT ./P13 1.png
+INPUT ./P13 1.png
+INPUT P13 1.png
+INPUT ./P13 2.png
+INPUT ./P13 2.png
+INPUT P13 2.png
 INPUT ./P14.png
 INPUT ./P14.png
 INPUT P14.png
@@ -1074,12 +1086,21 @@ INPUT P14 k.png
 INPUT ./P14 code.png
 INPUT ./P14 code.png
 INPUT P14 code.png
+INPUT ./P15.png
+INPUT ./P15.png
+INPUT P15.png
+INPUT ./P15 code.png
+INPUT ./P15 code.png
+INPUT P15 code.png
 INPUT ./P16b.png
 INPUT ./P16b.png
 INPUT P16b.png
 INPUT ./P16c.png
 INPUT ./P16c.png
 INPUT P16c.png
+INPUT ./P17b.png
+INPUT ./P17b.png
+INPUT P17b.png
 INPUT 111652004_CM_HW5.aux
 INPUT ./111652004_CM_HW5.out
 INPUT ./111652004_CM_HW5.out

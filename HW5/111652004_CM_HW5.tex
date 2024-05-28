@@ -552,7 +552,24 @@ which yields $(a, b, c)=\left(\dfrac{23}{12}, -\dfrac{4}{3}, \dfrac{5}{12}\right
         \item $y'=-ty+\dfrac{4t}{y}, \quad 0\leq t\leq 1, \quad y(0)=1$ with $hmax=0.2$ and $hmin=0.01$.
     \end{enumerate}
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. The code is provided after the two graphs.
+\begin{enumerate}
+    \item $\ $
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P13a.png}
+    \end{center}
+    \item $\ $
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P13b.png}
+    \end{center} \qed
+\end{enumerate}
+
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{P13 1.png}\\
+    The code for Problem 13\\
+    \includegraphics[width=0.85\textwidth]{P13 2.png}\\
+    The code for Problem 13 (Contidued)
+\end{center}
 
 
 \newpage
@@ -579,10 +596,31 @@ Hence $y(5)=56751.0367687$. Since $k=3$ in the code, the order of truncation err
 
 \newpage
 \begin{problem}\label{problem 15} % 5.9 8a
-    Suppose the swinging pendulum described in the lead example of this chapter is $2$ ft long and that $g = 32.17\ \text{ft}/\text{s}^2$. With $h = 0.1\ \text{s}$, compare the angle $\theta$ obtained for the following two initial-value problems at $t = 0, 1, 2$.\footnote{I read this as ``find values of $\theta(1)$ and $\theta(2)$ given $\theta(0)=\pi/6$.''} $$\dfrac{\dd^2\theta}{\dd t^2}+\dfrac{g}{L}\sin\theta=0, \quad \theta(0)=\dfrac{\pi}{6},\quad \theta'(0)=0.$$ You shall use Adams fourth-order predictor-corrector algorithm to obtain your numerical answer.
+    Suppose the swinging pendulum described in the lead example of this chapter is $2$ ft long and that $g = 32.17\ \text{ft}/\text{s}^2$. With $h = 0.1\ \text{s}$, compare the angle $\theta$ obtained for the following two initial-value problems at $t = 0, 1, 2$: $$\dfrac{\dd^2\theta}{\dd t^2}+\dfrac{g}{L}\sin\theta=0, \quad \theta(0)=\dfrac{\pi}{6},\quad \theta'(0)=0.$$ You shall use Adams fourth-order predictor-corrector algorithm to obtain your numerical answer.
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. The solutions is approximated as follows:
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{P15.png}
+\end{center}
+For values approximated at $t=0,1,2$:
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $t$ & Approximation \\
+        \hline
+        $0$ & $0.523599$ \\
+        \hline
+        $1$ & $-0.368034$ \\
+        \hline
+        $2$ & $-0.012316$ \\
+        \hline
+    \end{tabular}
+\end{center} \qed
 
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{P15 code.png}\\
+    The code for Problem 15
+\end{center}
 
 \newpage
 \begin{problem}\label{problem 16} % 5.10 4
@@ -616,27 +654,69 @@ Hence $y(5)=56751.0367687$. Since $k=3$ in the code, the order of truncation err
     \begin{center}
         \includegraphics[width=0.7\textwidth]{P16c.png}
     \end{center}
-    \item The characteristic polynomial is $$P(\lambda)=\lambda^2-4\lambda+3,$$ which has roots $1, 3$. Since one of them is with magnitude greater than one, the method does not satisfy the root condition. Thus, it is not stable and not convergent. From (a), we have $$y'(t_i)=\dfrac{-3y(t_y)+4y(t_{i+1})-y(t_{i+2})}{2h}+\dfrac{h^2}{3}y'''(\xi_i)$$ for some $\xi_i\in(t_i, t_{i+2})$. Hence, the truncation error is $$\tau_i(h)=\dfrac{h^2}{3}y'''(\xi_1)=\dfrac{h^2}{3}f''(t, y(t)).$$ If the function $f''(t, y(t))$ is bounded on $[a, b]$, then $$\lim_{h\to 0}\max_{1\leq i\leq N}|\tau_i(h)|=0,$$ which implies that the method is consistent; otherwise, the method is not consistent. \qed
+    \item The characteristic polynomial is $$P(\lambda)=\lambda^2-4\lambda+3,$$ which has roots $\lambda=1, 3$. Since one of them is with magnitude greater than one, the method does not satisfy the root condition. Thus, it is not stable and not convergent. From (a), we have $$y'(t_i)=\dfrac{-3y(t_y)+4y(t_{i+1})-y(t_{i+2})}{2h}+\dfrac{h^2}{3}y'''(\xi_i)$$ for some $\xi_i\in(t_i, t_{i+2})$. Hence, the truncation error is $$\tau_i(h)=\dfrac{h^2}{3}y'''(\xi_1)=\dfrac{h^2}{3}f''(t, y(t)).$$ If the function $f''(t, y(t))$ is bounded on $[a, b]$, then $$\lim_{h\to 0}\max_{1\leq i\leq N}|\tau_i(h)|=0,$$ which implies that the method is consistent; otherwise, the method is not consistent. \qed
 \end{enumerate}
 
 
 \newpage
 \begin{problem}\label{problem 17} % 5.10 5
-    Given the multistep method $$\omega_{i+1}=-\dfrac{3}{2}\omega_i+3\omega_{i-1}-\dfrac{1}{2}\omega_{i-2}+3g\:f(t_i, \omega_i), \quad \text{for}\ i=2,3,\dots, N-1$$ with starting values $\omega_0$, $\omega_1$, and $\omega_2$:
+    Given the multistep method $$\omega_{i+1}=-\dfrac{3}{2}\omega_i+3\omega_{i-1}-\dfrac{1}{2}\omega_{i-2}+3h\:f(t_i, \omega_i), \quad \text{for}\ i=2,3,\dots, N-1$$ with starting values $\omega_0$, $\omega_1$, and $\omega_2$:
     \begin{enumerate}
         \item Find the local truncation error.
         \item Comment on consistency, stability, and convergence.
     \end{enumerate}
 \end{problem}
 \textbf{Solution}.
+\begin{enumerate}
+    \item I consider $\omega_i$ as $y(t_i)$. I use the notation $y(t_i)$ instead of $\omega_i$ as it is more clear with derivatives. We have 
+    \begin{equation*}
+        y(t_{i+1})=y(t_i)+hy'(t_i)+\dfrac{h^2}{2}y''(t_i)+\dfrac{h^3}{6}y'''(t_i)+\dfrac{h^4}{24}y^{(4)}(t_i)+\cdots,
+    \end{equation*}
+    \begin{equation*}
+        y(t_{i-1})=y(t_i)-hy'(t_i)+\dfrac{h^2}{2}y''(t_i)-\dfrac{h^3}{6}y'''(t_i)+\dfrac{h^4}{24}y^{(4)}(t_i)+\cdots,
+    \end{equation*}
+    and
+    \begin{equation*}
+        y(t_{i-2})=y(t_i)-2hy'(t_i)+\dfrac{4h^2}{2}y''(t_i)-\dfrac{8h^3}{6}y'''(t_i)+\dfrac{16h^4}{24}y^{(4)}(t_i)+\cdots.
+    \end{equation*}
+    Thus, 
+    \begin{align*}
+        3f(t_w, \omega_i)&=\dfrac{1}{h}\cdot\left(\omega_{i+1}+\dfrac{3}{2}\omega_i-3\omega_{i-1}+\dfrac{1}{2}\omega_{i-2}\right)\\
+        &=\dfrac{1}{h}\cdot\left(y(t_{i+1})+\dfrac{3}{2}y(t_i)-3y(t_{i-1})+\dfrac{1}{2}y(t_{i-1})\right)\\
+        &=\dfrac{1}{h}\cdot\bigg[\left(1+\dfrac{3}{2}-3+\dfrac{1}{2}\right)\cdot y(t_i)\\
+        &\quad\qquad+\left(1+3-1\right)\cdot hy'(t_i)\\
+        &\quad\qquad+\left(\dfrac{1}{2}-\dfrac{3}{2}+1\right)\cdot h^2y''(t_i)\\
+        &\quad\qquad+\left(\dfrac{1}{6}+\dfrac{1}{2}-\dfrac{4}{6}\right)\cdot h^3y'''(t_i)\\
+        &\quad\qquad+\left(\dfrac{1}{24}-\dfrac{1}{8}+\dfrac{1}{3}\right)\cdot h^4 y^{(4)}(t_i)+\cdots\bigg]\\
+        &=3y'(t_i)+\dfrac{h^3}{4}y^{(4)}(t_i)+\mathcal{O}(h^4).
+    \end{align*}
+    Hence, there is some $\xi_i\in(t_{i-2}, t_i)$ such that $$3f(t_w, \omega_i)=3y'(t_i)+\dfrac{h^3}{4}y^{(4)}(\xi_i).$$
+    Therefore, the local truncation error is $$\tau_i(h)=\dfrac{h^3}{12}y^{4}(\xi_i)$$ for some $\xi_i\in(t_{i-2}, t_{i})$.
+    \item The characteristic polynomial is $P(\lambda)=\lambda^3+\dfrac{3}{2}\lambda^2-3\lambda-\dfrac{1}{2}$, which has a root with magnitude greater than one (this root is in $(-3, -2)$). Hence, it is not stable and not convergent.
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{P17b.png}
+    \end{center}
+    By (a), the local truncation error is $$\tau_i(h)=\dfrac{h^3}{12}y^{4}(\xi_i).$$ If $y^{4}$ is bounded on the domain, then \begin{align*}
+        \lim_{h\to0}\max_{1\leq i\leq N}|\tau_i(h)|&=\lim_{h\to0}\dfrac{h^3}{12}\cdot\max_{1\leq i\leq N}|y^{(4)}(\xi_i)|\\
+        &=0.
+    \end{align*} Hence, the method is consistent. \qed
+\end{enumerate}
 
 
 \newpage
 \begin{problem}\label{problem 18} % 5.11 11
     Discuss consistency, stability, and convergence for the implicit trapezoidal method $$\omega_{i+1}=\omega_i+\dfrac{h}{2}\left(f(t_{i+1}, \omega_{i+1})+f(t_i, \omega_i)\right),\quad \text{for}\ i=0,1,2,\dots, N-1$$ with $\omega_0=\alpha$ applied to the differential equation $$y'=f(t, y), \quad a\leq t\leq b, \quad y(a)=\alpha.$$
 \end{problem}
-\textbf{Solution}.
-
+\textbf{Solution}. Since the characteristic polynomial is $P(\lambda)=\lambda-1$, which has a root $\lambda=1$, the method is strongly stable, and thus is consistent. I consider $\omega_i$ as $y(t_i)$. I use the notation $y(t_i)$ instead of $\omega_i$ as it is more clear with derivatives. We have 
+\begin{equation*}
+    y'(t_{i+1})=y'(t_i)+hy''(t_i)+\dfrac{h^2}{2}y'''(t_i)+\cdots.
+\end{equation*}
+Hence, 
+\begin{align*}
+    y(t_{i+1})&=y(t_i)+\dfrac{h}{2}\left(y'(t_i)+y'(t_i)+hy''(t_i)+\dfrac{h^2}{2}y'''(t_i)+\cdots\right)\\
+    &=y(t_i)+hy'(t_i)+\dfrac{h^2}{2}y''(t_i)+\dfrac{h^3}{4}y'''(t_i)+\cdots.
+\end{align*}
+Hence, there is some $\xi\in(t_i, t_{i+1})$ such that $$y(t_{i+1})=y(t_i)+hy'(t_i)+\dfrac{h^2}{2}y''(\xi_i).$$ Therefore, the local truncation error is $$\tau_i(h)=\dfrac{h^2}{2}y''(\xi_i)$$ for some $\xi_i\in(t_i, t_{i+1})$.  If $y''$ is bounded on the domain, then the method is consistent. \qed
 
 \newpage
 \begin{problem}\label{problem 19} % 5.11 10

@@ -11,84 +11,133 @@ def plot_array(x_axis, y_axis, title):
     plt.grid(True)
     plt.savefig(f"P{title[-3:]}.png", transparent=True)
 
-def adams_variable_step_size_predictor_corrector(f, alpha, a, b, TOL, hmax, hmin):
-    def RK4(h, v0, x0):
-        x_v_tuple_list = [(x0, v0)]
-        for j in range(1, 4):
-            x, v = x_v_tuple_list[-1]
-            k1 = h * f(x, v)
-            k2 = h * f(x + h / 2, v + k1 / 2)
-            k3 = h * f(x + h / 2, v + k2 / 2)
-            k4 = h * f(x + h, v + k3)
-            V = v + (k1 + 2 * k2 + 2 * k3 + k4) / 6
-            X = x0 + j * h
-            x_v_tuple_list.append((X, V))
-        return x_v_tuple_list
+def adams_variable_step_size_predictor_corrector(f, t, y, b, h_min, h_max, tol, N):
+    def rk4(f, t, y, h):
+        k1 = h*f(t, y)
+        k2 = h*f(t + h/2, y + k1/2)
+        k3 = h*f(t + h/2, y + k2/2)
+        k4 = h*f(t + h, y + k3)
+        t=t+h
+        return t,y + (k1 + 2*k2 + 2*k3 + k4)/6
     
-    t0, w0, h, FLAG, LAST = a, alpha, hmax, True, False
-    t_values = [t0]
-    approx_soln_list = [w0]
-    RK4_approx = RK4(h, w0, t0)
-    NFLAG = True
-    i = 4
-    t = RK4_approx[-1][0] + h
+    AB_correctors = [
+        [2, 3, -1],
+        [12, 23, -16, 5],
+        [24, 55, -59, 37, -9],
+        [720, 1901, -2774, 2616, -1274, 251]
+    ]
+    AM_correctors=[
+        [2, 1, 1],
+        [12, 5, 8, -1],
+        [24, 9, 19, -5,1],
+        [720, 251, 646, -264, 106,-19]   
+    ]
 
-    while FLAG:
-        w_list = [RK4_approx[-j][1] for j in range(4, 0, -1)]
-        t_list = [RK4_approx[-j][0] for j in range(4, 0, -1)]
+    corrector = AB_correctors[N-2]
+    time = [t]
+    y_values = [y]
+    result=[]
+    last=False
+    h=h_max
 
-        WP = w_list[-1] + h * (55 * f(t_list[-1], w_list[-1]) - 59 * f(t_list[-2], w_list[-2]) + 37 * f(t_list[-3], w_list[-3]) - 9 * f(t_list[-4], w_list[-4])) / 24
-        WC = w_list[-1] + h * (9 * f(t, WP) + 19 * f(t_list[-1], w_list[-1]) - 5 * f(t_list[-2], w_list[-2]) + f(t_list[-3], w_list[-3])) / 24
-        sigma = 19 * abs(WC - WP) / (270 * h)
+    for _i in range(1, N):
+        t_i,y_i=rk4(f, time[_i-1], y_values[_i-1],h)
+        y_values.append(y_i)
+        time.append(t_i)
+    nflag=True
+    i=N
+    t=time[len(time)-1]+h
+
+    while h != 0:
+        fix = 0
+    
+        for j in range(N):
+            fix += corrector[j+1] * f(time[i-j-1], y_values[i-j-1])
+        wp = y_values[i-1] + h/corrector[0]*fix
+
         
-        if sigma <= TOL:
-            w_list.append(WC)
-            t_list.append(t)
+        coeffs = AM_correctors[N-2]
+        fix = coeffs[1]*f(t, wp)
+    
+        for j in range(len(coeffs)-2):
+            fix += coeffs[j+2] * f(time[i-j-1], y_values[i-j-1])
+        wc = y_values[i-1] + h/coeffs[0]*fix
 
-            if NFLAG:
-                for j in range(i - 3, i + 1):
-                    t_values.append(t_list[j - (i - 4)])
-                    approx_soln_list.append(w_list[j - (i - 4)])
-            else:
-                t_values.append(t)
-                approx_soln_list.append(WC)
+        sigma=19*abs(wc-wp)/(270*h)
 
-            if LAST:
-                FLAG = False
+        if(sigma<=tol):
+            y_values.append(wc)
+            time.append(t)
+            if nflag:
+                for j in range(N):
+                    result.append([time[i-N+j],y_values[i-N+j]])
             else:
-                i += 1
-                NFLAG = False
-                if sigma <= 0.1 * TOL or t + h > b:
-                    q = (TOL / 2 / sigma) ** 0.25
-                    if q > 4:
-                        h *= 4
-                    else:
-                        h *= q
-                    if h > hmax:
-                        h = hmax
-                    if t + 4 * h > b:
-                        h = (b - t) / 4
-                        LAST = True
-                    RK4_approx = RK4(h, w_list[-1], t_list[-1])
-                    NFLAG = True
-                    i += 3
+                result.append([time[i],y_values[i]])
+            if last:
+                # print('last')
+                result.append([time[i],y_values[i]])
+                break
+            else:
+                i=i+1
+
+                nflag=False
+                if sigma<=(0.1*tol) or time[i-1]+h>b:
+                    q=(tol/(2*sigma)) ** (0.25)
+                    if q>4:
+                        h=4*h
+                    else: 
+                        h=q*h
+                        
+                    if h>h_max:
+                        h=h_max
+                        
+                    if time[i-1]+4*h>=b:
+                        h=(b-time[i-1])/4
+                        last=True
+                    
+                    for _i in range(-1, N-2):
+                        t_i,y_i=rk4(f, time[i+_i], y_values[i+_i],h)
+                        y_values.append(y_i)
+                        time.append(t_i)
+                    nflag=True
+                    
+                elif time[i-1]+4*h>=b:
+                    h=(b-time[i-1])/4
+                    last=True
+
+                    for _i in range(-1, N-2):
+                        t_i,y_i=rk4(f, time[i+_i], y_values[i+_i],h)
+                        y_values.append(y_i)
+                        time.append(t_i)
+                    nflag=True
+                    i=i+N-1
         else:
-            q = (TOL / (2 * sigma)) ** 0.25
-            if q < 0.1:
-                h *= 0.1
-            else:
-                h *= q
-            if h < hmin:
-                FLAG = 0
-                raise ValueError("Minimum step size exceeded")
-            else:
-                if NFLAG:
-                    i -= 3
-                    RK4_approx = RK4(h, w_list[-1], t_list[-1])
-                    NFLAG = True
+            q=(tol/(2*sigma))**0.25
 
-        t = t_list[-1] + h
+            if(q<0.1):
+                h=0.1*h
+            else: 
+                h=q*h
+            
+            if h<h_min:
+                break
+            else :
+                if nflag:
+                    i=i-(N-1)
 
+                for _i in range(-1, N-2):
+                        t_i,y_i=rk4(f, time[i+_i], y_values[i+_i],h)
+                        if((i+_i+1)>=len(y_values)):
+                            y_values.append(y_i)
+                            time.append(t_i)
+                            
+                        else:
+                            y_values[i+_i+1]=y_i
+                            time[i+_i+1]=t_i
+                nflag=True
+                i=i+N-1
+        t=time[len(time)-1]+h
+    t_values, approx_soln_list = [result[i][0] for i in range(len(result))], [result[i][1] for i in range(len(result))]
     return t_values, approx_soln_list
 
 
@@ -98,10 +147,10 @@ def f_a(t, y):
 def f_b(t, y):
     return - t * y + 4 * t / y
 
-t_values_a, approximation_a = adams_variable_step_size_predictor_corrector(f_a, 0, 0, 1, 1e-4, 0.2, 0.01)
+t_values_a, approximation_a = adams_variable_step_size_predictor_corrector(f_a, 0, 0, 1, 0.01, 0.2, 1e-4, 4)
 
-plot_array(t_values_a, approximation_a, "Approximation by the Adams Variable Step-Siza Predictor-Corrector Algorithm: 13a")
+plot_array(t_values_a, approximation_a, "Approximation by the Adams Variable Step-Size Predictor-Corrector Algorithm: 13a")
 
-t_values_b, approximation_b = adams_variable_step_size_predictor_corrector(f_b, 1, 0, 1, 1e-4, 0.2, 0.01)
+t_values_b, approximation_b = adams_variable_step_size_predictor_corrector(f_b, 0, 1, 1, 0.01, 0.2, 1e-4, 4)
 
-plot_array(t_values_b, approximation_b, "Approximation by the Adams Variable Step-Siza Predictor-Corrector Algorithm: 13b")
+plot_array(t_values_b, approximation_b, "Approximation by the Adams Variable Step-Size Predictor-Corrector Algorithm: 13b")

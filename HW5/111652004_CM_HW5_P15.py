@@ -1,11 +1,9 @@
 import math
 import matplotlib.pyplot as plt
 
-def plot_arrays(x_axis, y_1s, y_2s, title):
+def plot_array(x_axis, y_axis, title):
     plt.figure(figsize=(10, 6))
-    plt.plot(x_axis, y_1s, 'o', label='Approximated Solution')
-    plt.plot(x_axis, y_2s, 'x', label='True Solution')
-
+    plt.plot(x_axis, y_axis, 'o-', label='Approximated Solution')
     plt.xlabel('t')
     plt.ylabel('y(t)')
     plt.title(title)
@@ -35,24 +33,52 @@ def adams_fourth_order_predictor_correction_method(f, alpha, a, b, N):
     y_0 = alpha
     approx_soln_list = [y_0]
     t_values = [t_0]
+    m = len(alpha)
 
     for i in range(1, N + 1):
         if i < 4:
-            t = t_values[-4]
-            w = approx_soln_list[-4]
-            k_1 = h * f(t[-1], w)
-            k_2 = h * f(t[-1] + h / 2, w + k_1 / 2)
-            k_3 = h * f(t[-1] + h / 2, w + k_2 / 2)
-            k_4 = h * f(t[-1] + h, w + k_3)
-            approx_soln_list.append(w + (k_1 + 2 * k_2 + 2 * k_3 + k_4) / 6)
-            t_values.append(a + i * h)
+            k = [[], [], [], []]
+            for j in range(m):
+                k[0].append(h * f[j](t_values[-1], approx_soln_list[-1]))
+            for j in range(m):
+                k[1].append(h * f[j](t_values[-1] + h / 2, (approx_soln_list[-1][0] + k[0][0] / 2, approx_soln_list[-1][1] + k[0][1] / 2)))
+            for j in range(m):
+                k[2].append(h * f[j](t_values[-1] + h / 2, (approx_soln_list[-1][0] + k[1][0] / 2, approx_soln_list[-1][1] + k[1][1] / 2)))
+            for j in range(m):
+                k[3].append(h * f[j](t_values[-1] + h, (approx_soln_list[-1][0] + k[2][0], approx_soln_list[-1][1] + k[2][1])))
+            w = []
+            for j in range(m):
+                w.append(approx_soln_list[-1][j] + (k[0][j] + 2 * k[1][j] + 2 * k[2][j] + k[3][j]) / 6)
+            approx_soln_list.append(w)
+            t = a + i * h
+            t_values.append(t)
         else:
+            w = approx_soln_list[-4:]
+            t = t_values[-4:]
             t_values.append(a + i * h)
-            w_0 = w[0] + h * (55 * f(t[0], w[0]) - 59 * f(t[1], w[1]) + 37 * f(t[2], w[2]) - 9 * f(t[3], w[3])) / 24
-            w_0 = w[0] + h * (9 * f(t_values[-1], w_0) + 19 * f(t[0], w[0]) - 5 * f(t[1], w[1]) + f(t[2], w[2])) / 24
-            approx_soln_list.append(w_0)
+            w_0_list = []
+            W = []
+            for j in range(m):
+                w_0 = w[3][j] + h * (55 * f[j](t[3], w[3]) - 59 * f[j](t[2], w[2]) + 37 * f[j](t[1], w[1]) - 9 * f[j](t[0], w[0])) / 24
+                w_0_list.append(w_0)
+            for j in range(m):
+                w_0 = w[3][j] + h * (9 * f[j](t_values[-1], w_0_list) + 19 * f[j](t[3], w[3]) - 5 * f[j](t[2], w[2]) + f[j](t[1], w[1])) / 24
+                W.append(w_0)
+            approx_soln_list.append(W)
 
     return t_values, approx_soln_list
 
-def f(t, y):
-    return 0
+def phi(t, y):
+    return -32.14 / 2 * math.sin(y[0])
+
+def psi(t, y):
+    return y[1]
+
+f = [psi, phi]
+
+t_list, y_approx_list = adams_fourth_order_predictor_correction_method(f, (math.pi / 6, 0), 0, 2, 20)
+
+plot_array(t_list, [y[0] for y in y_approx_list], "Approximation by Adams Fourth-Order Predictor-Corrector Algorithm: 15")
+
+for a_y in y_approx_list:
+    print(f"{a_y[0]:.6f}")
