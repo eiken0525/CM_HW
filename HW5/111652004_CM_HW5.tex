@@ -439,7 +439,15 @@
     \end{align*}
     for each $i=0,1,2,\dots, N-1$, cannot have local truncation error $\mathcal{O}(h^3)$ for any choice of constants $a_1$, $a_2$, $\alpha_2$, and $\delta_2$.
 \end{problem}
-\textbf{Solution}. 
+\textbf{Solution}. Let $i\in\{0,1,2,\dots, N-1\}$. The local truncation error at the $(i+1)$st step is \begin{equation*}
+    \tau_{i+1}(h)=\dfrac{y_{i+1}-y_i}{h}-\dfrac{a_1\:f(t_i, y_i)+a_2\:f(t_i+\alpha_2, \omega_1+\delta_2\:f(t_i, y_i))}{h}.
+\end{equation*}
+Since $$y'=f(t, y)$$ and $$y''=f'(t, y),$$ we have $$y_{i+1}=y_i+h\:f(t_i, y_i)+\dfrac{h^2}{2}f'(t_i, y_i)+\dfrac{h^3}{6}f''(t_i, y_i)+\mathcal{O}(h^4).$$
+Hence, \begin{align*}
+    \tau_{i+1}(h)&=\dfrac{y_{i+1}-y_i}{h}-\dfrac{a_1\:f(t_i, y_i)+a_2\:f(t_i+\alpha_2, \omega_1+\delta_2\:f(t_i, y_i))}{h}\\
+    &=f(t_i, y_i)+\dfrac{h}{2}f'(t_i, y_i)+\dfrac{h^2}{6}f''(t_i, y_i)+\mathcal{O}(h^3)-\dfrac{a_1\:f(t_i, y_i)+a_2\:f(t_i+\alpha_2, \omega_1+\delta_2\:f(t_i, y_i))}{h}
+\end{align*}
+Since $\dfrac{h^2}{6}f''(t_i, y_i)$ will never be vanished, the truncation error cannot be with order $\mathcal{O}(h^3)$ (at most $\mathcal{O}(h^2)$). \qed
 
 
 \newpage
